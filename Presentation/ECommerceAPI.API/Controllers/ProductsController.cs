@@ -3,12 +3,8 @@ using ECommerceAPI.Application.Features.Commands.Product.DeleteProduct;
 using ECommerceAPI.Application.Features.Commands.Product.UpdateProduct;
 using ECommerceAPI.Application.Features.Queries.Product.GetAllProduct;
 using ECommerceAPI.Application.Features.Queries.Product.GetByIdProduct;
-using ECommerceAPI.Application.Repositories;
-using ECommerceAPI.Domain.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace ECommerceAPI.API.Controllers
 {
@@ -24,37 +20,37 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAllProduct()
         {
             GetAllProductQueryResponse response = await _mediator.Send(new GetAllProductQueryRequest());
             return Ok(response);
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetById([FromRoute] GetByIdQueryRequest request)
+        public async Task<IActionResult> GetByIdProduct([FromRoute] GetByIdQueryRequest request)
         {
             GetByIdQueryResponse response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(CreateProductCommandRequest request)
+        public async Task<IActionResult> CreateProduct(CreateProductCommandRequest request)
         {
-            await _mediator.Send(request);
+            CreateProductCommandResponse response = await _mediator.Send(request);
             return Ok();
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(UpdateProductCommandRequest request)
+        public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
         {
-            await _mediator.Send(request);
+            UpdateProductCommandResponse response = await _mediator.Send(request);
             return Ok();
         }
 
         [HttpDelete("{Id}")]
-        public async Task<IActionResult> Delete([FromRoute] DeleteProductCommandRequest request)
+        public async Task<IActionResult> DeleteProduct([FromRoute] DeleteProductCommandRequest request)
         {
-            await _mediator.Send(request);
+            DeleteProductCommandResponse response = await _mediator.Send(request);
             return Ok();
         }
     }
