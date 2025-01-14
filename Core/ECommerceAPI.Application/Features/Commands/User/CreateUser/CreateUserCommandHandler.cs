@@ -1,40 +1,34 @@
-﻿using MediatR;
+﻿using ECommerceAPI.Application.Abstractions.Services;
+using ECommerceAPI.Application.DTOs.User;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace ECommerceAPI.Application.Features.Commands.User.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
     {
-        private readonly UserManager<Domain.Entities.Identity.User> _userManager;
+        private readonly IUserService _userService;
 
-        public CreateUserCommandHandler(UserManager<Domain.Entities.Identity.User> userManager)
+        public CreateUserCommandHandler(IUserService userService)
         {
-            _userManager = userManager;
+            _userService = userService;
         }
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            IdentityResult result = await _userManager.CreateAsync(new()
+            CreateUserResponse userResponse = await _userService.CreateUserAsync(new()
             {
-                Id = Guid.NewGuid().ToString(),
                 FullName = request.FullName,
-                UserName = request.Username,
-                Email = request.Email
-            }, request.Password);
+                Username = request.Username,
+                Email = request.Email,
+                Password = request.Password,
+            });
 
-            CreateUserCommandResponse response = new() { Succeeded = result.Succeeded };
-
-            if (result.Succeeded)
+            return new()
             {
-                response.Message = "User registration successful.";
-            }
-            else
-            {
-                foreach (var error in result.Errors)
-                    response.Message = $"{error.Code} - {error.Description}";
-            }
-
-            return response;
+                Succeeded = userResponse.Succeeded,
+                Message = userResponse.Message
+            };
         }
     }
 }
