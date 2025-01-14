@@ -1,6 +1,10 @@
-﻿namespace ECommerceAPI.Application.Features.Commands.User.LoginUser
+﻿using ECommerceAPI.Application.DTOs;
+
+namespace ECommerceAPI.Application.Features.Commands.User.LoginUser
 {
     public class LoginUserCommandResponse
     {
+        public Token Token { get; set; }
+        public string Message { get; set; }
     }
 }

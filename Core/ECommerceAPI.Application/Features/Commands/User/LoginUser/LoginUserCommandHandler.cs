@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using ECommerceAPI.Application.Abstractions.Token;
+using ECommerceAPI.Application.DTOs;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace ECommerceAPI.Application.Features.Commands.User.LoginUser
@@ -7,11 +9,13 @@ namespace ECommerceAPI.Application.Features.Commands.User.LoginUser
     {
         private readonly UserManager<Domain.Entities.Identity.User> _userManager;
         private readonly SignInManager<Domain.Entities.Identity.User> _signInManager;
+        private readonly ITokenHandler tokenHandler;
 
-        public LoginUserCommandHandler(UserManager<Domain.Entities.Identity.User> userManager, SignInManager<Domain.Entities.Identity.User> signInManager)
+        public LoginUserCommandHandler(UserManager<Domain.Entities.Identity.User> userManager, SignInManager<Domain.Entities.Identity.User> signInManager, ITokenHandler tokenHandler)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            this.tokenHandler = tokenHandler;
         }
 
         public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
@@ -30,10 +34,17 @@ namespace ECommerceAPI.Application.Features.Commands.User.LoginUser
             SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
             if (result.Succeeded)
             {
-                //Yetkilendirme
+                Token token = tokenHandler.CreateAccessToken(10);
+                return new LoginUserCommandResponse()
+                {
+                    Token = token
+                };
             }
 
-            return new();
+            return new LoginUserCommandResponse()
+            {
+                Message = "Username or password is incorrect."
+            };
         }
     }
 }

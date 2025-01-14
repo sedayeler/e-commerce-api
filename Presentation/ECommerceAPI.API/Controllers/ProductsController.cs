@@ -4,12 +4,14 @@ using ECommerceAPI.Application.Features.Commands.Product.UpdateProduct;
 using ECommerceAPI.Application.Features.Queries.Product.GetAllProduct;
 using ECommerceAPI.Application.Features.Queries.Product.GetByIdProduct;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceAPI.API.Controllers
 {
     [Route("api/products")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Admin")]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
