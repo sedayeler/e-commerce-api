@@ -10,5 +10,6 @@ namespace ECommerceAPI.Application.Abstractions.Services
     public interface IAuthService
     {
         Task<DTOs.Token> LoginAsync(string UsernameOrEmail, string Password, int accessTokenLifetime);
+        Task<DTOs.Token> RefreshTokenLoginAsync(string refreshToken);
     }
 }

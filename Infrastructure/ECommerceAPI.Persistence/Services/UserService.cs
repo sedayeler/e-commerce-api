@@ -44,5 +44,19 @@ namespace ECommerceAPI.Persistence.Services
 
             return userResponse;
         }
+
+        public async Task UpdateRefreshTokenAsync(string refreshToken, User user, DateTime accessTokenDate, int addOnAccessTokenDate)
+        {
+            if (user != null)
+            {
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenEndDate = accessTokenDate.AddMinutes(addOnAccessTokenDate);
+                await _userManager.UpdateAsync(user);
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
     }
 }
