@@ -22,14 +22,10 @@ namespace ECommerceAPI.Application.Validators.Products
                     .WithMessage("Please enter a value between 2 and 150 characters for the product name.");
 
             RuleFor(p => p.Price)
-                .NotNull()
-                    .WithMessage("Please enter the price.")
                 .Must(p => p > 0)
                     .WithMessage("The price must be greater than 0.");
 
             RuleFor(p => p.Stock)
-                .NotNull()
-                    .WithMessage("Please enter the stock information.")
                 .Must(p => p >= 0)
                     .WithMessage("The stock cannot be less than 0.");
         }
