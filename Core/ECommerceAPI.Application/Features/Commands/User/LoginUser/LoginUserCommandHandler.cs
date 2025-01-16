@@ -1,4 +1,5 @@
-﻿using ECommerceAPI.Application.Abstractions.Token;
+﻿using ECommerceAPI.Application.Abstractions.Services;
+using ECommerceAPI.Application.Abstractions.Token;
 using ECommerceAPI.Application.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -7,43 +8,19 @@ namespace ECommerceAPI.Application.Features.Commands.User.LoginUser
 {
     public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, LoginUserCommandResponse>
     {
-        private readonly UserManager<Domain.Entities.Identity.User> _userManager;
-        private readonly SignInManager<Domain.Entities.Identity.User> _signInManager;
-        private readonly ITokenHandler tokenHandler;
+        private readonly IAuthService _authService;
 
-        public LoginUserCommandHandler(UserManager<Domain.Entities.Identity.User> userManager, SignInManager<Domain.Entities.Identity.User> signInManager, ITokenHandler tokenHandler)
+        public LoginUserCommandHandler(IAuthService authService)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            this.tokenHandler = tokenHandler;
+            _authService = authService;
         }
 
         public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
         {
-            Domain.Entities.Identity.User user = await _userManager.FindByNameAsync(request.UsernameOrEmail);
-            if (user == null)
+            Token token = await _authService.LoginAsync(request.UsernameOrEmail, request.Password, 10);
+            return new()
             {
-                user = await _userManager.FindByEmailAsync(request.UsernameOrEmail);
-            }
-
-            if (user == null)
-            {
-                throw new Exception("Username or password is incorrect.");
-            }
-
-            SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
-            if (result.Succeeded)
-            {
-                Token token = tokenHandler.CreateAccessToken(10);
-                return new LoginUserCommandResponse()
-                {
-                    Token = token
-                };
-            }
-
-            return new LoginUserCommandResponse()
-            {
-                Message = "Username or password is incorrect."
+                Token = token
             };
         }
     }

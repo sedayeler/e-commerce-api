@@ -21,7 +21,7 @@ namespace ECommerceAPI.Application.Features.Commands.User.CreateUser
                 FullName = request.FullName,
                 Username = request.Username,
                 Email = request.Email,
-                Password = request.Password,
+                Password = request.Password
             });
 
             return new()

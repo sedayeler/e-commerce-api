@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ECommerceAPI.Application.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace ECommerceAPI.Application.Abstractions.Services
 {
     public interface IAuthService
     {
+        Task<DTOs.Token> LoginAsync(string UsernameOrEmail, string Password, int accessTokenLifetime);
     }
 }
