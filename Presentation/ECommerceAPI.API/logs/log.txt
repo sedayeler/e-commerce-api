@@ -1,0 +1,464 @@
+2025-01-17 15:44:31.031 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 15:44:31.736 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 15:44:31.736 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 15:44:31.743 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 15:44:31.744 +03:00 [INF] Hosting environment: Development
+2025-01-17 15:44:31.745 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 15:44:33.591 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 15:44:33.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 304.3277ms
+2025-01-17 15:44:33.916 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 15:44:33.916 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 15:44:33.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 6.6730ms
+2025-01-17 15:44:33.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 15:44:33.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 21.8134ms
+2025-01-17 15:44:34.102 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 176.0757ms
+2025-01-17 15:44:34.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 15:44:35.163 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.0697ms
+2025-01-17 17:15:20.759 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:15:21.184 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 17:15:21.185 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 17:15:21.187 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:15:21.188 +03:00 [INF] Hosting environment: Development
+2025-01-17 17:15:21.188 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 17:15:22.036 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 17:15:22.264 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 229.0044ms
+2025-01-17 17:15:22.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 17:15:22.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 17:15:22.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 17:15:22.297 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.1757ms
+2025-01-17 17:15:22.320 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 30.7500ms
+2025-01-17 17:15:22.360 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.3230ms
+2025-01-17 17:15:23.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 17:15:23.484 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 132.7254ms
+2025-01-17 17:15:35.079 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69
+2025-01-17 17:15:35.091 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/users/login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7031
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Content-Type: application/json
+Content-Length: 69
+Postman-Token: [Redacted]
+2025-01-17 17:15:35.114 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:15:35.153 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-17 17:15:35.202 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "sedayeler2",
+  "password": "Sedayeler@1"
+}
+2025-01-17 17:15:36.805 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:15:37.329 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:15:37.427 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-17 17:15:37.450 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-17 17:15:37.469 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2025-01-17 17:15:37.477 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 2318.6941ms
+2025-01-17 17:15:37.479 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:15:37.481 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2VkYXllbGVyMiIsIm5iZiI6MTczNzEyMzMzNywiZXhwIjoxNzM3MTM0NzM3LCJpc3MiOiJ3d3cubXlhcGkuY29tIiwiYXVkIjoid3d3LmJpbG1lbW5lLmNvbSJ9.rFWME9b3oBLsIDhnN8d0yVgIj_tdSfMmfYsdCxYsa0A","expiration":"2025-01-17T17:25:37.1792159Z","refreshToken":"BsMbJiwV/BPCkiceMtatcrChck89DcdHXB6QYhsm52o="}}
+2025-01-17 17:15:37.492 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69 - 200 - application/json;+charset=utf-8 2412.7375ms
+2025-01-17 17:15:56.013 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/products - -
+2025-01-17 17:15:56.015 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7031
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Cache-Control: no-cache
+Postman-Token: [Redacted]
+2025-01-17 17:15:56.151 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:15:56.156 +03:00 [INF] Route matched with {action = "GetAllProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProduct() on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-17 17:15:56.223 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt"
+FROM products AS p
+2025-01-17 17:15:56.233 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2025-01-17 17:15:56.248 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2025-01-17 17:15:56.249 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API) in 91.1919ms
+2025-01-17 17:15:56.251 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:15:56.251 +03:00 [INF] ResponseBody: {"products":[{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":8,"createdAt":"2024-12-02T21:59:04.972065Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":9,"createdAt":"2024-12-02T22:05:08.619633Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":10,"createdAt":"2024-12-02T22:08:32.168033Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":11,"createdAt":"2024-12-02T22:28:13.796009Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":0,"orders":null,"id":14,"createdAt":"2024-12-03T17:41:31.749447Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":15,"createdAt":"2024-12-03T18:08:53.892968Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":16,"createdAt":"2024-12-03T18:10:23.825893Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":17,"createdAt":"2024-12-03T18:10:30.077797Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":0,"orders":null,"id":18,"createdAt":"2024-12-06T12:47:32.498446Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":-1,"orders":null,"id":19,"createdAt":"2024-12-06T12:48:09.317298Z","updatedAt":"0001-01-01T00:00:00"},{"name":"","description":"string","price":12,"stock":10,"orders":null,"id":20,"createdAt":"2024-12-06T12:52:31.243959Z","updatedAt":"0001-01-01T00:00:00"},{"name":"","description":"seda","price":0,"stock":0,"orders":null,"id":21,"createdAt":"2024-12-06T12:55:53.293163Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":18,"stock":12,"orders":null,"id":22,"createdAt":"2024-12-06T13:20:04.42496Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":2,"stock":0,"orders":null,"id":23,"createdAt":"2024-12-06T14:17:38.718572Z","updatedAt":"0001-01-01T00:00:00"},{"name":"aa","description":"s","price":1,"stock":1,"orders":null,"id":24,"createdAt":"2024-12-06T14:36:51.964424Z","updatedAt":"0001-01-01T00:00:00"},{"name":"aa","description":"s","price":1,"stock":1,"orders":null,"id":25,"createdAt":"2024-12-06T14:40:07.634618Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":10,"orders":null,"id":26,"createdAt":"2024-12-18T12:23:02.996856Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":0,"orders":null,"id":27,"createdAt":"2024-12-18T12:23:17.176289Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":-1,"orders":null,"id":28,"createdAt":"2024-12-18T12:23:34.535866Z","updatedAt":"0001-01-01T00:00:00"}]}
+2025-01-17 17:15:56.255 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/products - - - 200 - application/json;+charset=utf-8 242.2958ms
+2025-01-17 17:17:12.041 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:17:12.303 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 17:17:12.304 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 17:17:12.305 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:17:12.306 +03:00 [INF] Hosting environment: Development
+2025-01-17 17:17:12.306 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 17:17:13.167 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 17:17:13.391 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 225.8532ms
+2025-01-17 17:17:13.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 17:17:13.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 17:17:13.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 17:17:13.416 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 6.7764ms
+2025-01-17 17:17:13.434 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 24.5987ms
+2025-01-17 17:17:13.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.5736ms
+2025-01-17 17:17:14.397 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 17:17:14.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 115.9738ms
+2025-01-17 17:17:39.092 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69
+2025-01-17 17:17:39.099 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/users/login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7031
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Content-Type: application/json
+Content-Length: 69
+Postman-Token: [Redacted]
+2025-01-17 17:17:39.116 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:17:39.145 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-17 17:17:39.180 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "sedayeler2",
+  "password": "Sedayeler@1"
+}
+2025-01-17 17:17:40.525 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:17:40.885 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:17:40.970 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-17 17:17:40.993 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-17 17:17:41.006 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2025-01-17 17:17:41.014 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1861.8187ms
+2025-01-17 17:17:41.016 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:17:41.018 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2VkYXllbGVyMiIsIm5iZiI6MTczNzEyMzQ2MCwiZXhwIjoxNzM3MTM0ODYwLCJpc3MiOiJ3d3cubXlhcGkuY29tIiwiYXVkIjoid3d3LmJpbG1lbW5lLmNvbSJ9.pzanMd108n3nR90IoXsBVc_r7g5WsanCkgsixm9y_3g","expiration":"2025-01-17T17:27:40.7405453Z","refreshToken":"B6Q6E3MrANGd786+62baoh87AXTCASIh7CoO+ie2ntA="}}
+2025-01-17 17:17:41.029 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69 - 200 - application/json;+charset=utf-8 1936.8786ms
+2025-01-17 17:17:48.726 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/products - -
+2025-01-17 17:17:48.728 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7031
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Cache-Control: no-cache
+Postman-Token: [Redacted]
+2025-01-17 17:17:48.806 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:17:48.811 +03:00 [INF] Route matched with {action = "GetAllProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProduct() on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-17 17:17:48.871 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt"
+FROM products AS p
+2025-01-17 17:17:48.884 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2025-01-17 17:17:48.898 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2025-01-17 17:17:48.899 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API) in 85.6993ms
+2025-01-17 17:17:48.900 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:17:48.901 +03:00 [INF] ResponseBody: {"products":[{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":8,"createdAt":"2024-12-02T21:59:04.972065Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":9,"createdAt":"2024-12-02T22:05:08.619633Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":10,"createdAt":"2024-12-02T22:08:32.168033Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":11,"createdAt":"2024-12-02T22:28:13.796009Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":0,"orders":null,"id":14,"createdAt":"2024-12-03T17:41:31.749447Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":15,"createdAt":"2024-12-03T18:08:53.892968Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":16,"createdAt":"2024-12-03T18:10:23.825893Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":17,"createdAt":"2024-12-03T18:10:30.077797Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":0,"orders":null,"id":18,"createdAt":"2024-12-06T12:47:32.498446Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":-1,"orders":null,"id":19,"createdAt":"2024-12-06T12:48:09.317298Z","updatedAt":"0001-01-01T00:00:00"},{"name":"","description":"string","price":12,"stock":10,"orders":null,"id":20,"createdAt":"2024-12-06T12:52:31.243959Z","updatedAt":"0001-01-01T00:00:00"},{"name":"","description":"seda","price":0,"stock":0,"orders":null,"id":21,"createdAt":"2024-12-06T12:55:53.293163Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":18,"stock":12,"orders":null,"id":22,"createdAt":"2024-12-06T13:20:04.42496Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":2,"stock":0,"orders":null,"id":23,"createdAt":"2024-12-06T14:17:38.718572Z","updatedAt":"0001-01-01T00:00:00"},{"name":"aa","description":"s","price":1,"stock":1,"orders":null,"id":24,"createdAt":"2024-12-06T14:36:51.964424Z","updatedAt":"0001-01-01T00:00:00"},{"name":"aa","description":"s","price":1,"stock":1,"orders":null,"id":25,"createdAt":"2024-12-06T14:40:07.634618Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":10,"orders":null,"id":26,"createdAt":"2024-12-18T12:23:02.996856Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":0,"orders":null,"id":27,"createdAt":"2024-12-18T12:23:17.176289Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":-1,"orders":null,"id":28,"createdAt":"2024-12-18T12:23:34.535866Z","updatedAt":"0001-01-01T00:00:00"}]}
+2025-01-17 17:17:48.907 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/products - - - 200 - application/json;+charset=utf-8 180.5841ms
+2025-01-17 17:19:55.517 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:19:55.932 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 17:19:55.933 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 17:19:55.935 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:19:55.936 +03:00 [INF] Hosting environment: Development
+2025-01-17 17:19:55.937 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 17:19:56.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 17:19:56.632 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 222.7139ms
+2025-01-17 17:19:56.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 17:19:56.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 17:19:56.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 17:19:56.674 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.6762ms
+2025-01-17 17:19:56.691 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 26.6371ms
+2025-01-17 17:19:56.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 66.4382ms
+2025-01-17 17:19:57.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 17:19:58.141 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 248.4272ms
+2025-01-17 17:20:01.036 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69
+2025-01-17 17:20:01.049 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/users/login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7031
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Content-Type: application/json
+Content-Length: 69
+Postman-Token: [Redacted]
+2025-01-17 17:20:01.070 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:20:01.104 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-17 17:20:01.144 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "sedayeler2",
+  "password": "Sedayeler@1"
+}
+2025-01-17 17:20:02.569 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:20:02.961 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:20:03.104 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-17 17:20:03.121 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-17 17:20:03.135 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2025-01-17 17:20:03.142 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 2032.3784ms
+2025-01-17 17:20:03.144 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:20:03.146 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2VkYXllbGVyMiIsIm5iZiI6MTczNzEyMzYwMiwiZXhwIjoxNzM3MTM1MDAyLCJpc3MiOiJ3d3cubXlhcGkuY29tIiwiYXVkIjoid3d3LmJpbG1lbW5lLmNvbSJ9.3EjJeErbGla8l7jauTxIaKd01MGCLwN7DB1nCr-H-7A","expiration":"2025-01-17T17:30:02.8163391Z","refreshToken":"xJ1H07n8QRsv0ebaWwoDHq8GSA77/rppX+/V8t0M1Pg="}}
+2025-01-17 17:20:03.156 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69 - 200 - application/json;+charset=utf-8 2120.2504ms
+2025-01-17 17:20:11.693 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/products - -
+2025-01-17 17:20:11.695 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7031
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Cache-Control: no-cache
+Postman-Token: [Redacted]
+2025-01-17 17:20:11.766 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:20:11.770 +03:00 [INF] Route matched with {action = "GetAllProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProduct() on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-17 17:20:11.846 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt"
+FROM products AS p
+2025-01-17 17:20:11.860 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2025-01-17 17:20:11.883 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2025-01-17 17:20:11.886 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API) in 114.1144ms
+2025-01-17 17:20:11.887 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:20:11.888 +03:00 [INF] ResponseBody: {"products":[{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":8,"createdAt":"2024-12-02T21:59:04.972065Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":9,"createdAt":"2024-12-02T22:05:08.619633Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":10,"createdAt":"2024-12-02T22:08:32.168033Z","updatedAt":"0001-01-01T00:00:00"},{"name":"Ayna","description":"abc","price":10,"stock":2,"orders":null,"id":11,"createdAt":"2024-12-02T22:28:13.796009Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":0,"orders":null,"id":14,"createdAt":"2024-12-03T17:41:31.749447Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":15,"createdAt":"2024-12-03T18:08:53.892968Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":16,"createdAt":"2024-12-03T18:10:23.825893Z","updatedAt":"0001-01-01T00:00:00"},{"name":"a","description":"b","price":0,"stock":0,"orders":null,"id":17,"createdAt":"2024-12-03T18:10:30.077797Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":0,"orders":null,"id":18,"createdAt":"2024-12-06T12:47:32.498446Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":0,"stock":-1,"orders":null,"id":19,"createdAt":"2024-12-06T12:48:09.317298Z","updatedAt":"0001-01-01T00:00:00"},{"name":"","description":"string","price":12,"stock":10,"orders":null,"id":20,"createdAt":"2024-12-06T12:52:31.243959Z","updatedAt":"0001-01-01T00:00:00"},{"name":"","description":"seda","price":0,"stock":0,"orders":null,"id":21,"createdAt":"2024-12-06T12:55:53.293163Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":18,"stock":12,"orders":null,"id":22,"createdAt":"2024-12-06T13:20:04.42496Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":2,"stock":0,"orders":null,"id":23,"createdAt":"2024-12-06T14:17:38.718572Z","updatedAt":"0001-01-01T00:00:00"},{"name":"aa","description":"s","price":1,"stock":1,"orders":null,"id":24,"createdAt":"2024-12-06T14:36:51.964424Z","updatedAt":"0001-01-01T00:00:00"},{"name":"aa","description":"s","price":1,"stock":1,"orders":null,"id":25,"createdAt":"2024-12-06T14:40:07.634618Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":10,"orders":null,"id":26,"createdAt":"2024-12-18T12:23:02.996856Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":0,"orders":null,"id":27,"createdAt":"2024-12-18T12:23:17.176289Z","updatedAt":"0001-01-01T00:00:00"},{"name":"string","description":"string","price":10,"stock":-1,"orders":null,"id":28,"createdAt":"2024-12-18T12:23:34.535866Z","updatedAt":"0001-01-01T00:00:00"}]}
+2025-01-17 17:20:11.896 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/products - - - 200 - application/json;+charset=utf-8 202.9753ms
+2025-01-17 17:45:06.779 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:45:07.095 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 17:45:07.095 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 17:45:07.096 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:45:07.097 +03:00 [INF] Hosting environment: Development
+2025-01-17 17:45:07.097 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 17:45:08.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 17:45:08.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 574.1005ms
+2025-01-17 17:45:08.544 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 17:45:08.544 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 17:45:08.544 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 17:45:08.551 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 6.8651ms
+2025-01-17 17:45:08.578 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 33.4313ms
+2025-01-17 17:45:08.603 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.7784ms
+2025-01-17 17:45:09.558 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 17:45:09.686 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 127.7378ms
+2025-01-17 17:45:53.253 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:45:53.545 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 17:45:53.546 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 17:45:53.547 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:45:53.548 +03:00 [INF] Hosting environment: Development
+2025-01-17 17:45:53.549 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 17:45:53.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 17:45:54.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 209.5886ms
+2025-01-17 17:45:54.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 17:45:54.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 17:45:54.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 17:45:54.228 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 4.2000ms
+2025-01-17 17:45:54.250 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 26.3738ms
+2025-01-17 17:45:54.277 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.9575ms
+2025-01-17 17:45:55.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 17:45:55.531 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 153.4247ms
+2025-01-17 17:45:58.754 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69
+2025-01-17 17:45:58.765 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/users/login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7031
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Content-Type: application/json
+Content-Length: 69
+Postman-Token: [Redacted]
+2025-01-17 17:45:58.790 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:45:58.825 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-17 17:45:58.863 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "sedayeler2",
+  "password": "Sedayeler@1"
+}
+2025-01-17 17:46:00.119 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:46:00.496 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:46:00.597 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-17 17:46:00.623 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-17 17:46:00.637 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2025-01-17 17:46:00.645 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1814.9909ms
+2025-01-17 17:46:00.647 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:46:00.649 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2VkYXllbGVyMiIsIm5iZiI6MTczNzEyNTE2MCwiZXhwIjoxNzM3MTM2NTYwLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjcyMzEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjcyMzEifQ.NU1vh8nLizhcxYu8XYl-JxDWKRV7l-e1X6wrZKTF4cI","expiration":"2025-01-17T17:56:00.3523421Z","refreshToken":"sAJZruvB1R6CmtaMCuDLRvmUV5nUxERYHkoqfKTApeQ="}}
+2025-01-17 17:46:00.658 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69 - 200 - application/json;+charset=utf-8 1904.3403ms
+2025-01-17 17:51:00.135 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:51:00.430 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 17:51:00.431 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 17:51:00.433 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:51:00.434 +03:00 [INF] Hosting environment: Development
+2025-01-17 17:51:00.435 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 17:51:01.122 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 17:51:01.316 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 196.9551ms
+2025-01-17 17:51:01.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 17:51:01.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 17:51:01.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 17:51:01.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.3667ms
+2025-01-17 17:51:01.353 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 21.1919ms
+2025-01-17 17:51:01.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.3837ms
+2025-01-17 17:51:02.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 17:51:02.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 151.7844ms
+2025-01-17 17:51:03.415 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69
+2025-01-17 17:51:03.442 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:51:03.476 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-17 17:51:05.071 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:51:05.505 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:51:05.657 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-17 17:51:05.685 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-17 17:51:05.707 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 2226.8175ms
+2025-01-17 17:51:05.709 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:51:05.720 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69 - 200 - application/json;+charset=utf-8 2304.3135ms
+2025-01-17 17:51:28.169 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69
+2025-01-17 17:51:28.176 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:51:28.178 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-17 17:51:28.246 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:51:28.311 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:51:28.317 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-17 17:51:28.321 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-17 17:51:28.323 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 142.0292ms
+2025-01-17 17:51:28.324 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:51:28.325 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69 - 200 - application/json;+charset=utf-8 156.3284ms
+2025-01-17 17:52:01.612 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/products - -
+2025-01-17 17:52:01.699 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:52:01.704 +03:00 [INF] Route matched with {action = "GetAllProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProduct() on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-17 17:52:01.735 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt"
+FROM products AS p
+2025-01-17 17:52:01.745 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2025-01-17 17:52:01.762 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API) in 56.6598ms
+2025-01-17 17:52:01.763 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:52:01.765 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/products - - - 200 - application/json;+charset=utf-8 152.1969ms
+2025-01-17 17:52:37.655 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:52:37.993 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-17 17:52:37.995 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-17 17:52:37.997 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:52:37.998 +03:00 [INF] Hosting environment: Development
+2025-01-17 17:52:37.998 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-17 17:52:38.360 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-17 17:52:38.611 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 254.8326ms
+2025-01-17 17:52:38.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-17 17:52:38.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-17 17:52:38.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-17 17:52:38.637 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.0330ms
+2025-01-17 17:52:38.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 17.8865ms
+2025-01-17 17:52:38.674 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.0741ms
+2025-01-17 17:52:39.785 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-17 17:52:39.917 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 132.1150ms
+2025-01-17 17:52:41.677 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69
+2025-01-17 17:52:41.695 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:52:41.713 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-17 17:52:42.875 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:52:43.182 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-17 17:52:43.265 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-17 17:52:43.286 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-17 17:52:43.302 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1583.7165ms
+2025-01-17 17:52:43.304 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-17 17:52:43.313 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 69 - 200 - application/json;+charset=utf-8 1636.5441ms
+2025-01-17 17:52:51.320 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/products - -
+2025-01-17 17:52:51.390 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:52:51.394 +03:00 [INF] Route matched with {action = "GetAllProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProduct() on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-17 17:52:51.465 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt"
+FROM products AS p
+2025-01-17 17:52:51.476 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2025-01-17 17:52:51.490 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API) in 93.333ms
+2025-01-17 17:52:51.492 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.GetAllProduct (ECommerceAPI.API)'
+2025-01-17 17:52:51.494 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/products - - - 200 - application/json;+charset=utf-8 173.9685ms
