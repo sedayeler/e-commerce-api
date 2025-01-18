@@ -675,3 +675,366 @@ System.Exception: Username or password is incorrect.
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
 2025-01-17 19:54:47.856 +03:00 [ERR] Username or password is incorrect.
 2025-01-17 19:54:47.875 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 70 - 500 - application/json 1570.9458ms
+2025-01-18 19:19:01.285 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 19:19:01.776 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 19:19:01.777 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 19:19:01.779 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 19:19:01.779 +03:00 [INF] Hosting environment: Development
+2025-01-18 19:19:01.780 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 19:19:03.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 19:19:03.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 291.7462ms
+2025-01-18 19:19:03.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 19:19:03.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 19:19:03.463 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 19:19:03.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 24.7813ms
+2025-01-18 19:19:03.489 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 48.2644ms
+2025-01-18 19:19:03.578 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 120.7666ms
+2025-01-18 19:19:04.655 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 19:19:04.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 143.3526ms
+2025-01-18 19:19:55.658 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 88
+2025-01-18 19:19:55.677 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:19:55.708 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 19:19:57.251 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 19:19:57.291 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 19:19:57.296 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1583.0079ms
+2025-01-18 19:19:57.299 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:19:57.309 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 88 - 200 0 - 1650.6214ms
+2025-01-18 19:20:25.383 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/products-hub - -
+2025-01-18 19:20:25.388 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/products-hub - - - 404 0 - 5.1131ms
+2025-01-18 19:28:45.809 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 19:28:45.824 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 19:29:06.791 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 95
+2025-01-18 19:29:06.792 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:29:06.795 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 19:29:06.918 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 19:29:06.922 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 19:29:06.922 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 126.175ms
+2025-01-18 19:29:06.924 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:29:06.925 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 95 - 200 0 - 134.7614ms
+2025-01-18 19:31:17.948 +03:00 [INF] Executed endpoint '/products-hub'
+2025-01-18 19:31:17.950 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/products-hub - - - 101 - - 152141.7142ms
+2025-01-18 19:31:21.737 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 19:31:21.738 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 19:31:30.084 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 95
+2025-01-18 19:31:30.085 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:31:30.086 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 19:31:30.104 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 19:31:30.107 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 19:31:30.107 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 19.8236ms
+2025-01-18 19:31:30.108 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:31:30.109 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 95 - 200 0 - 25.0536ms
+2025-01-18 19:34:29.585 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 19:34:30.429 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 19:34:30.430 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 19:34:30.432 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 19:34:30.433 +03:00 [INF] Hosting environment: Development
+2025-01-18 19:34:30.433 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 19:34:30.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 19:34:31.256 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 259.0196ms
+2025-01-18 19:34:31.280 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 19:34:31.280 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 19:34:31.280 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 19:34:31.291 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.5907ms
+2025-01-18 19:34:31.305 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 24.2346ms
+2025-01-18 19:34:31.330 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.8316ms
+2025-01-18 19:34:32.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 19:34:32.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 161.2568ms
+2025-01-18 19:34:35.956 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 19:34:35.989 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 19:34:41.851 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 95
+2025-01-18 19:34:41.854 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:34:41.883 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 19:34:43.156 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 19:34:43.195 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 19:34:43.201 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1311.0059ms
+2025-01-18 19:34:43.204 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:34:43.212 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 95 - 200 0 - 1361.2340ms
+2025-01-18 19:35:53.898 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 19:35:54.250 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 19:35:54.250 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 19:35:54.252 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 19:35:54.253 +03:00 [INF] Hosting environment: Development
+2025-01-18 19:35:54.253 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 19:35:55.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 19:35:55.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 248.0660ms
+2025-01-18 19:35:55.430 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 19:35:55.430 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 19:35:55.430 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 19:35:55.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.0153ms
+2025-01-18 19:35:55.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 25.7884ms
+2025-01-18 19:35:55.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.7515ms
+2025-01-18 19:35:56.614 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 19:35:56.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.0349ms
+2025-01-18 19:36:04.245 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 19:36:04.262 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 19:36:09.471 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 95
+2025-01-18 19:36:09.475 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:36:09.504 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 19:36:10.793 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 19:36:10.827 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 19:36:10.832 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1322.7117ms
+2025-01-18 19:36:10.834 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:36:10.843 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 95 - 200 0 - 1371.7060ms
+2025-01-18 19:37:49.563 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 19:37:49.912 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 19:37:49.913 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 19:37:49.915 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 19:37:49.916 +03:00 [INF] Hosting environment: Development
+2025-01-18 19:37:49.917 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 19:37:50.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 19:37:51.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 238.5261ms
+2025-01-18 19:37:51.052 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 19:37:51.052 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 19:37:51.052 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 19:37:51.062 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.6039ms
+2025-01-18 19:37:51.074 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 21.7740ms
+2025-01-18 19:37:51.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.2436ms
+2025-01-18 19:37:53.783 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 19:37:53.978 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 194.4080ms
+2025-01-18 19:37:58.454 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 19:37:58.467 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 19:38:01.580 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 95
+2025-01-18 19:38:01.582 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:38:01.601 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 19:38:02.742 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 19:38:02.785 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 19:38:02.790 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1184.4219ms
+2025-01-18 19:38:02.793 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 19:38:02.802 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 95 - 200 0 - 1222.1477ms
+2025-01-18 20:10:37.540 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:10:37.890 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:10:37.890 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:10:37.892 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:10:37.892 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:10:37.893 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:10:38.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:10:38.801 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 216.7602ms
+2025-01-18 20:10:38.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:10:38.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:10:38.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:10:38.825 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.5769ms
+2025-01-18 20:10:38.876 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 59.0477ms
+2025-01-18 20:10:38.905 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.4503ms
+2025-01-18 20:10:40.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:10:40.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 140.8917ms
+2025-01-18 20:10:48.730 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 20:10:48.748 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 20:11:16.198 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-18 20:11:16.202 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:11:16.237 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 20:11:17.519 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 20:11:17.561 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 20:11:17.566 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1324.0057ms
+2025-01-18 20:11:17.569 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:11:17.577 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 0 - 1379.4642ms
+2025-01-18 20:20:06.500 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:20:06.818 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:20:06.819 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:20:06.821 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:20:06.821 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:20:06.822 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:20:07.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:20:07.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 216.9283ms
+2025-01-18 20:20:07.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:20:07.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:20:07.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:20:07.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.0245ms
+2025-01-18 20:20:07.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 27.6206ms
+2025-01-18 20:20:07.597 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.7029ms
+2025-01-18 20:20:08.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:20:09.005 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 208.8913ms
+2025-01-18 20:20:17.072 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 20:20:17.089 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 20:20:20.510 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-18 20:20:20.512 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:20:20.532 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 20:20:21.834 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 20:20:21.873 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 20:20:21.877 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1339.7472ms
+2025-01-18 20:20:21.879 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:20:21.888 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 0 - 1378.7592ms
+2025-01-18 20:22:41.570 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:22:41.907 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:22:41.908 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:22:41.910 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:22:41.911 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:22:41.912 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:22:42.603 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:22:42.803 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 201.3859ms
+2025-01-18 20:22:42.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:22:42.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:22:42.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:22:42.827 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.7744ms
+2025-01-18 20:22:42.844 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 26.1061ms
+2025-01-18 20:22:42.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.0656ms
+2025-01-18 20:22:44.113 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:22:44.256 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 143.9340ms
+2025-01-18 20:22:46.638 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-18 20:22:46.660 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:22:46.682 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 20:22:48.018 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 20:22:48.062 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 20:22:48.067 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1379.8871ms
+2025-01-18 20:22:48.070 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:22:48.083 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 0 - 1445.3275ms
+2025-01-18 20:27:11.993 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:27:12.285 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:27:12.286 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:27:12.288 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:27:12.289 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:27:12.290 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:27:12.988 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:27:13.212 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 226.2189ms
+2025-01-18 20:27:13.229 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:27:13.229 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:27:13.229 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:27:13.236 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 6.7325ms
+2025-01-18 20:27:13.288 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 59.1122ms
+2025-01-18 20:27:13.313 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.9003ms
+2025-01-18 20:27:14.196 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:27:14.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.6412ms
+2025-01-18 20:27:50.847 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 20:27:50.865 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 20:28:37.317 +03:00 [INF] Executed endpoint '/products-hub'
+2025-01-18 20:28:37.321 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/products-hub - - - 101 - - 46474.5092ms
+2025-01-18 20:31:04.995 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:31:05.353 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:31:05.354 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:31:05.355 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:31:05.356 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:31:05.356 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:31:06.146 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:31:06.437 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 295.9824ms
+2025-01-18 20:31:06.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:31:06.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:31:06.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:31:06.470 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.4323ms
+2025-01-18 20:31:06.497 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 35.6308ms
+2025-01-18 20:31:06.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 75.0129ms
+2025-01-18 20:31:08.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:31:08.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.0576ms
+2025-01-18 20:31:12.764 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-18 20:31:12.786 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:31:12.826 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 20:31:14.668 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 20:31:14.729 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 20:31:14.737 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1903.5792ms
+2025-01-18 20:31:14.742 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:31:14.757 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 0 - 1992.4717ms
+2025-01-18 20:33:47.357 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:33:47.713 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:33:47.714 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:33:47.716 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:33:47.717 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:33:47.717 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:33:48.479 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:33:48.972 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 500.5152ms
+2025-01-18 20:33:49.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:33:49.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:33:49.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:33:49.012 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.9054ms
+2025-01-18 20:33:49.038 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 34.1805ms
+2025-01-18 20:33:49.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.2264ms
+2025-01-18 20:33:51.089 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:33:51.191 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-18 20:33:51.231 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:33:51.283 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 20:33:51.368 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 279.5196ms
+2025-01-18 20:33:53.409 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 20:33:53.472 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 20:33:53.477 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 2187.3803ms
+2025-01-18 20:33:53.479 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:33:53.492 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 0 - 2301.4153ms
+2025-01-18 20:33:58.693 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 20:33:58.697 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 20:42:10.524 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:42:10.865 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:42:10.867 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:42:10.869 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:42:10.870 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:42:10.871 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:42:11.927 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:42:12.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 259.7369ms
+2025-01-18 20:42:12.215 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:42:12.215 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:42:12.215 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:42:12.224 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.3397ms
+2025-01-18 20:42:12.247 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 31.0824ms
+2025-01-18 20:42:12.280 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.1174ms
+2025-01-18 20:42:13.810 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:42:13.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.9115ms
+2025-01-18 20:42:18.963 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 20:42:18.993 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 20:42:30.288 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-18 20:42:30.292 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:42:30.330 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 20:42:32.192 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 20:42:32.265 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 20:42:32.272 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1932.7315ms
+2025-01-18 20:42:32.276 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:42:32.289 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 0 - 2001.2975ms
+2025-01-18 20:44:12.372 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-18 20:44:12.723 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-18 20:44:12.724 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-18 20:44:12.726 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-18 20:44:12.727 +03:00 [INF] Hosting environment: Development
+2025-01-18 20:44:12.728 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-18 20:44:13.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-18 20:44:13.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 261.6752ms
+2025-01-18 20:44:13.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-18 20:44:13.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-18 20:44:13.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-18 20:44:13.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 12.1879ms
+2025-01-18 20:44:13.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 32.2564ms
+2025-01-18 20:44:13.907 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.0105ms
+2025-01-18 20:44:15.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-18 20:44:15.501 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 163.8724ms
+2025-01-18 20:44:18.412 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/products-hub - -
+2025-01-18 20:44:18.438 +03:00 [INF] Executing endpoint '/products-hub'
+2025-01-18 20:44:23.944 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-18 20:44:23.950 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:44:23.989 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-18 20:44:25.831 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-18 20:44:25.887 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-18 20:44:25.893 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 1894.7192ms
+2025-01-18 20:44:25.896 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-18 20:44:25.908 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 0 - 1963.9101ms

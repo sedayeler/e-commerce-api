@@ -8,9 +8,9 @@ namespace ECommerceAPI.API.Extensions
 {
     public static class ConfigureExceptionHandlerExtension
     {
-        public static void ConfigureExceptionHandler<T>(this WebApplication application, ILogger<T> logger)
+        public static void ConfigureExceptionHandler<T>(this WebApplication app, ILogger<T> logger)
         {
-            application.UseExceptionHandler(builder =>
+            app.UseExceptionHandler(builder =>
             {
                 builder.Run(async context =>
                 {
