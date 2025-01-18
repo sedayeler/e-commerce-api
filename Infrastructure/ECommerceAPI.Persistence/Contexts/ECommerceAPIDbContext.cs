@@ -16,6 +16,8 @@ namespace ECommerceAPI.Persistence.Contexts
         public DbSet<Customer> customers { get; set; }
         public DbSet<Product> products { get; set; }
         public DbSet<Order> orders { get; set; }
+        public DbSet<Basket> baskets { get; set; }
+        public DbSet<BasketItem> basket_items { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -37,9 +39,12 @@ namespace ECommerceAPI.Persistence.Contexts
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Product>()
-                .Property(p => p.Id)
-                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Basket)
+                .WithOne(b => b.User)
+                .HasForeignKey<Basket>(b => b.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
+
