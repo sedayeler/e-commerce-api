@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ECommerceAPI.Persistence.Migrations
 {
     [DbContext(typeof(ECommerceAPIDbContext))]
-    [Migration("20250119134510_mig_1")]
+    [Migration("20250119140930_mig_1")]
     partial class mig1
     {
         /// <inheritdoc />
@@ -212,15 +212,13 @@ namespace ECommerceAPI.Persistence.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("orders");
                 });
@@ -433,7 +431,9 @@ namespace ECommerceAPI.Persistence.Migrations
                 {
                     b.HasOne("ECommerceAPI.Domain.Entities.Identity.User", "User")
                         .WithMany("Orders")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });

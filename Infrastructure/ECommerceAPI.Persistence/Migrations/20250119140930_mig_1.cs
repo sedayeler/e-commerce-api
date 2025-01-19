@@ -209,8 +209,7 @@ namespace ECommerceAPI.Persistence.Migrations
                     Address = table.Column<string>(type: "text", nullable: false),
                     Status = table.Column<string>(type: "text", nullable: false),
                     TotalPrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
-                    UserId1 = table.Column<string>(type: "text", nullable: true),
+                    UserId = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -218,10 +217,11 @@ namespace ECommerceAPI.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_orders", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_orders_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_orders_AspNetUsers_UserId",
+                        column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -347,9 +347,9 @@ namespace ECommerceAPI.Persistence.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_orders_UserId1",
+                name: "IX_orders_UserId",
                 table: "orders",
-                column: "UserId1");
+                column: "UserId");
         }
 
         /// <inheritdoc />
