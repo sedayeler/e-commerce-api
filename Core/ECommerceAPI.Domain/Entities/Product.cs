@@ -13,7 +13,7 @@ namespace ECommerceAPI.Domain.Entities
         public string Description { get; set; }
         public decimal Price { get; set; }
         public int Stock { get; set; }
-        public ICollection<Order> Orders { get; set; }
         public ICollection<BasketItem> BasketItems { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; }
     }
 }

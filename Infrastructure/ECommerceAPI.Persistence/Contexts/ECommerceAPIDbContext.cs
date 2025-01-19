@@ -13,9 +13,9 @@ namespace ECommerceAPI.Persistence.Contexts
 
         }
 
-        public DbSet<Customer> customers { get; set; }
         public DbSet<Product> products { get; set; }
         public DbSet<Order> orders { get; set; }
+        public DbSet<OrderItem> order_items { get; set; }
         public DbSet<Basket> baskets { get; set; }
         public DbSet<BasketItem> basket_items { get; set; }
 
