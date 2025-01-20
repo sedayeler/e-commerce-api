@@ -28,10 +28,11 @@ builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>
 
 builder.Services.AddFluentValidationAutoValidation();
 
-builder.Services.AddPersistenceServices();
 builder.Services.AddApplicationService();
+builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureService();
 builder.Services.AddSignalRService();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer("Admin", options =>

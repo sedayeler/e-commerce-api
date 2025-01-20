@@ -1625,3 +1625,17 @@ CREATE INDEX "IX_orders_UserId" ON orders ("UserId");
 2025-01-19 17:09:43.696 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20250119140930_mig_1', '7.0.0');
+2025-01-20 18:19:23.001 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-20 18:19:23.368 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-20 18:19:23.369 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-20 18:19:23.371 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-20 18:19:23.372 +03:00 [INF] Hosting environment: Development
+2025-01-20 18:19:23.372 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-20 18:19:24.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-20 18:19:24.986 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 271.3008ms
+2025-01-20 18:19:25.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-20 18:19:25.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-20 18:19:25.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-20 18:19:25.071 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.8186ms
+2025-01-20 18:19:25.107 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 43.4730ms
+2025-01-20 18:19:25.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 140.4028ms
