@@ -1,11 +1,5 @@
 ﻿using ECommerceAPI.Application.Features.Commands.Product.CreateProduct;
-using ECommerceAPI.Domain.Entities;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECommerceAPI.Application.Validators.Products
 {

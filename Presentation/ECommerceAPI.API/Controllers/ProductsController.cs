@@ -11,7 +11,7 @@ namespace ECommerceAPI.API.Controllers
 {
     [Route("api/products")]
     [ApiController]
-    //[Authorize(AuthenticationSchemes = "Admin")]
+    [Authorize(AuthenticationSchemes = "Admin")]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -39,21 +39,21 @@ namespace ECommerceAPI.API.Controllers
         public async Task<IActionResult> CreateProduct(CreateProductCommandRequest request)
         {
             CreateProductCommandResponse response = await _mediator.Send(request);
-            return Ok();
+            return Ok(response);
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
         {
             UpdateProductCommandResponse response = await _mediator.Send(request);
-            return Ok();
+            return Ok(response);
         }
 
         [HttpDelete("{Id}")]
         public async Task<IActionResult> DeleteProduct([FromRoute] DeleteProductCommandRequest request)
         {
             DeleteProductCommandResponse response = await _mediator.Send(request);
-            return Ok();
+            return Ok(response);
         }
     }
 }

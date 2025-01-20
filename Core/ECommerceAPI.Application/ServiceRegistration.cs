@@ -13,8 +13,8 @@ namespace ECommerceAPI.Application
     {
         public static void AddApplicationService(this IServiceCollection services)
         {
-            var assm = Assembly.GetExecutingAssembly();
-            services.AddMediatR(assm);
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assemblies));
         }
     }
 }

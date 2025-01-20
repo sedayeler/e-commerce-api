@@ -10,10 +10,9 @@ namespace ECommerceAPI.Application.Abstractions.Services
 {
     public interface IBasketService
     {
-        Task<Basket> GetUserBasketAsync();
+        Task<List<BasketItem>> GetBasketItemsAsync();
         Task AddItemToBasketAsync(CreateBasketItemRequest request);
-        Task<List<BasketItem>> GetBasketItemAsync();
         Task UpdateQuantityAsync(UpdateBasketItemRequest request);
-        Task RemoveBasketItemAsync(int basketItemId);                              
+        Task RemoveBasketItemAsync(int basketItemId);
     }
 }

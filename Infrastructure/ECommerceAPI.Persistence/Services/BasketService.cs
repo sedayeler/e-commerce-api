@@ -16,14 +16,14 @@ namespace ECommerceAPI.Persistence.Services
 {
     public class BasketService : IBasketService
     {
-        private readonly HttpContextAccessor _httpContextAccessor;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly UserManager<User> _userManager;
         private readonly IBasketReadRepository _basketReadRepository;
         private readonly IBasketWriteRepository _basketWriteRepository;
         private readonly IBasketItemReadRepository _basketItemReadRepository;
         private readonly IBasketItemWriteRepository _basketItemWriteRepository;
 
-        public BasketService(HttpContextAccessor httpContextAccessor, UserManager<User> userManager, IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, IBasketItemReadRepository basketItemReadRepository, IBasketItemWriteRepository basketItemWriteRepository)
+        public BasketService(IHttpContextAccessor httpContextAccessor, UserManager<User> userManager, IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, IBasketItemReadRepository basketItemReadRepository, IBasketItemWriteRepository basketItemWriteRepository)
         {
             _httpContextAccessor = httpContextAccessor;
             _userManager = userManager;
@@ -56,14 +56,20 @@ namespace ECommerceAPI.Persistence.Services
             return basket;
         }
 
-        public async Task<Basket> GetUserBasketAsync()
+        public async Task<List<BasketItem>> GetBasketItemsAsync()
         {
             Basket basket = await UserBasket();
-            return basket;
+
+            Basket? result = await _basketReadRepository.Table
+                .Include(b => b.BasketItems)
+                .ThenInclude(bi => bi.Product)
+                .FirstOrDefaultAsync(b => b.Id == basket.Id);
+
+            return result.BasketItems.ToList();
         }
 
         public async Task AddItemToBasketAsync(CreateBasketItemRequest request)
-        {
+            {
             Basket basket = await UserBasket();
 
             BasketItem existingItem = await _basketItemReadRepository.GetSingleAsync(bi => bi.BasketId == basket.Id && bi.ProductId == request.ProductId);
@@ -76,25 +82,13 @@ namespace ECommerceAPI.Persistence.Services
             {
                 var newItem = new BasketItem()
                 {
-                    Id = basket.Id,
+                    BasketId = basket.Id,
                     ProductId = request.ProductId,
                     Quantity = request.Quantity
                 };
                 await _basketItemWriteRepository.AddAsync(newItem);
             }
             await _basketItemWriteRepository.SaveAsync();
-        }
-
-        public async Task<List<BasketItem>> GetBasketItemAsync()
-        {
-            Basket basket = await UserBasket();
-
-            Basket? result = await _basketReadRepository.Table
-                .Include(b => b.BasketItems)
-                .ThenInclude(bi => bi.ProductId)
-                .FirstOrDefaultAsync(b => b.Id == basket.Id);
-
-            return result.BasketItems.ToList();
         }
 
         public async Task UpdateQuantityAsync(UpdateBasketItemRequest request)
