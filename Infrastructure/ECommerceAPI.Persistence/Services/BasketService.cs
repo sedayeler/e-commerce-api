@@ -37,7 +37,7 @@ namespace ECommerceAPI.Persistence.Services
         {
             var username = _httpContextAccessor?.HttpContext?.User?.Identity?.Name;
             if (string.IsNullOrEmpty(username))
-                throw new Exception("User information could not be retrieved.");
+                throw new Exception("User authentication error.");
 
             User? user = await _userManager.Users
                 .Include(u => u.Basket)
