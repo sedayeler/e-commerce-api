@@ -9,7 +9,6 @@ using ECommerceAPI.SignalR;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.IdentityModel.Tokens;
 using NpgsqlTypes;
 using Serilog;
@@ -18,6 +17,7 @@ using Serilog.Core;
 using Serilog.Sinks.PostgreSQL;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,6 +79,12 @@ builder.Host.UseSerilog(log);
 //    logging.RequestBodyLogLimit = 4096;
 //    logging.ResponseBodyLogLimit = 4096;
 //});
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

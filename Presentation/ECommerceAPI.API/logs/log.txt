@@ -2542,3 +2542,1378 @@ ORDER BY t."Id", t0."Id"
 2025-01-20 22:35:19.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 374.7466ms
 2025-01-20 22:35:20.308 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
 2025-01-20 22:35:20.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.2548ms
+2025-01-21 17:55:20.626 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 17:55:20.926 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 17:55:20.927 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 17:55:20.929 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 17:55:20.930 +03:00 [INF] Hosting environment: Development
+2025-01-21 17:55:20.930 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 17:55:22.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 17:55:22.358 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 283.3933ms
+2025-01-21 17:55:22.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 17:55:22.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 17:55:22.391 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 6.9131ms
+2025-01-21 17:55:22.403 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 18.7552ms
+2025-01-21 17:55:22.406 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 17:55:22.495 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.5808ms
+2025-01-21 17:55:23.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 17:55:23.872 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 187.1687ms
+2025-01-21 17:55:35.972 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 17:55:35.990 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 17:55:36.025 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 17:55:37.372 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 17:55:37.714 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 17:55:37.821 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 17:55:37.837 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 17:55:37.853 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1823.2095ms
+2025-01-21 17:55:37.855 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 17:55:37.865 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1892.3953ms
+2025-01-21 17:57:19.884 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/orders application/json 27
+2025-01-21 17:57:19.910 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-21 17:57:19.915 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2025-01-21 17:57:19.917 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/orders application/json 27 - 401 0 - 32.7535ms
+2025-01-21 17:57:38.166 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/orders application/json 27
+2025-01-21 17:57:38.216 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 17:57:38.223 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOrder(ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 17:57:38.385 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."AccessFailedCount", t."ConcurrencyStamp", t."Email", t."EmailConfirmed", t."FullName", t."LockoutEnabled", t."LockoutEnd", t."NormalizedEmail", t."NormalizedUserName", t."PasswordHash", t."PhoneNumber", t."PhoneNumberConfirmed", t."RefreshToken", t."RefreshTokenEndDate", t."SecurityStamp", t."TwoFactorEnabled", t."UserName", t."Id0", t."CreatedAt", t."UpdatedAt", t."UserId", b0."Id", b0."BasketId", b0."CreatedAt", b0."ProductId", b0."Quantity", b0."UpdatedAt"
+FROM (
+    SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id" AS "Id0", b."CreatedAt", b."UpdatedAt", b."UserId"
+    FROM "AspNetUsers" AS a
+    LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+    WHERE a."UserName" = @__username_0
+    LIMIT 1
+) AS t
+LEFT JOIN basket_items AS b0 ON t."Id0" = b0."BasketId"
+ORDER BY t."Id", t."Id0"
+2025-01-21 17:57:38.586 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API) in 361.052ms
+2025-01-21 17:57:38.589 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 17:57:38.667 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Your basket is empty.
+   at ECommerceAPI.Persistence.Services.OrderService.CreateOrderAsync(CreateOrderRequest request) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Infrastructure\ECommerceAPI.Persistence\Services\OrderService.cs:line 51
+   at ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandHandler.Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Core\ECommerceAPI.Application\Features\Commands\Order\CreateOrder\CreateOrderCommandHandler.cs:line 22
+   at ECommerceAPI.API.Controllers.OrdersController.CreateOrder(CreateOrderCommandRequest request) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\OrdersController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 110
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-21 17:57:38.747 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/orders application/json 27 - 500 - text/plain;+charset=utf-8 580.9431ms
+2025-01-21 17:58:07.364 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-21 17:58:07.367 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-21 17:58:07.369 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2025-01-21 17:58:07.370 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 401 0 - 5.5725ms
+2025-01-21 17:58:16.604 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/products application/json 84
+2025-01-21 17:58:16.606 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-21 17:58:16.614 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller ECommerceAPI.API.Controllers.ProductsController (ECommerceAPI.API).
+2025-01-21 17:58:16.769 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products ("CreatedAt", "Description", "Name", "Price", "Stock", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-01-21 17:58:16.783 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandResponse'.
+2025-01-21 17:58:16.786 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API) in 168.3377ms
+2025-01-21 17:58:16.787 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.ProductsController.CreateProduct (ECommerceAPI.API)'
+2025-01-21 17:58:16.788 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/products application/json 84 - 200 - application/json;+charset=utf-8 184.4721ms
+2025-01-21 17:58:48.330 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/baskets application/json 40
+2025-01-21 17:58:48.332 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.BasketsController.AddItemToBasket (ECommerceAPI.API)'
+2025-01-21 17:58:48.336 +03:00 [INF] Route matched with {action = "AddItemToBasket", controller = "Baskets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddItemToBasket(ECommerceAPI.Application.Features.Commands.Basket.AddItemToBasket.AddItemToBasketCommandRequest) on controller ECommerceAPI.API.Controllers.BasketsController (ECommerceAPI.API).
+2025-01-21 17:58:48.353 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id", b."CreatedAt", b."UpdatedAt", b."UserId"
+FROM "AspNetUsers" AS a
+LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+WHERE a."UserName" = @__username_0
+LIMIT 1
+2025-01-21 17:58:48.367 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__basket_Id_0='?' (DbType = Int32), @__request_ProductId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."BasketId", b."CreatedAt", b."ProductId", b."Quantity", b."UpdatedAt"
+FROM basket_items AS b
+WHERE b."BasketId" = @__basket_Id_0 AND b."ProductId" = @__request_ProductId_1
+LIMIT 1
+2025-01-21 17:58:48.389 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO basket_items ("BasketId", "CreatedAt", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-01-21 17:58:48.394 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.Basket.AddItemToBasket.AddItemToBasketCommandResponse'.
+2025-01-21 17:58:48.395 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.BasketsController.AddItemToBasket (ECommerceAPI.API) in 55.8645ms
+2025-01-21 17:58:48.397 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.BasketsController.AddItemToBasket (ECommerceAPI.API)'
+2025-01-21 17:58:48.398 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/baskets application/json 40 - 200 - application/json;+charset=utf-8 67.7091ms
+2025-01-21 17:58:55.989 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/baskets - -
+2025-01-21 17:58:55.990 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.BasketsController.GetBasketItems (ECommerceAPI.API)'
+2025-01-21 17:58:55.996 +03:00 [INF] Route matched with {action = "GetBasketItems", controller = "Baskets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBasketItems(ECommerceAPI.Application.Features.Queries.Basket.GetBasketItems.GetBasketItemsQueryRequest) on controller ECommerceAPI.API.Controllers.BasketsController (ECommerceAPI.API).
+2025-01-21 17:58:56.008 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id", b."CreatedAt", b."UpdatedAt", b."UserId"
+FROM "AspNetUsers" AS a
+LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+WHERE a."UserName" = @__username_0
+LIMIT 1
+2025-01-21 17:58:56.030 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__basket_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."UpdatedAt", t."UserId", t0."Id", t0."BasketId", t0."CreatedAt", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."CreatedAt0", t0."Description", t0."Name", t0."Price", t0."Stock", t0."UpdatedAt0"
+FROM (
+    SELECT b."Id", b."CreatedAt", b."UpdatedAt", b."UserId"
+    FROM baskets AS b
+    WHERE b."Id" = @__basket_Id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT b0."Id", b0."BasketId", b0."CreatedAt", b0."ProductId", b0."Quantity", b0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM basket_items AS b0
+    INNER JOIN products AS p ON b0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."BasketId"
+ORDER BY t."Id", t0."Id"
+2025-01-21 17:58:56.041 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Basket.GetBasketItems.GetBasketItemsQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 17:58:56.049 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.BasketsController.GetBasketItems (ECommerceAPI.API) in 49.5315ms
+2025-01-21 17:58:56.050 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.BasketsController.GetBasketItems (ECommerceAPI.API)'
+2025-01-21 17:58:56.051 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/baskets - - - 200 - application/json;+charset=utf-8 62.6953ms
+2025-01-21 17:59:17.397 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/orders application/json 27
+2025-01-21 17:59:17.399 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 17:59:17.400 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOrder(ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 17:59:17.412 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."AccessFailedCount", t."ConcurrencyStamp", t."Email", t."EmailConfirmed", t."FullName", t."LockoutEnabled", t."LockoutEnd", t."NormalizedEmail", t."NormalizedUserName", t."PasswordHash", t."PhoneNumber", t."PhoneNumberConfirmed", t."RefreshToken", t."RefreshTokenEndDate", t."SecurityStamp", t."TwoFactorEnabled", t."UserName", t."Id0", t."CreatedAt", t."UpdatedAt", t."UserId", b0."Id", b0."BasketId", b0."CreatedAt", b0."ProductId", b0."Quantity", b0."UpdatedAt"
+FROM (
+    SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id" AS "Id0", b."CreatedAt", b."UpdatedAt", b."UserId"
+    FROM "AspNetUsers" AS a
+    LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+    WHERE a."UserName" = @__username_0
+    LIMIT 1
+) AS t
+LEFT JOIN basket_items AS b0 ON t."Id0" = b0."BasketId"
+ORDER BY t."Id", t."Id0"
+2025-01-21 17:59:17.510 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API) in 106.3735ms
+2025-01-21 17:59:17.512 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 17:59:17.564 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Your basket is empty.
+   at ECommerceAPI.Persistence.Services.OrderService.CreateOrderAsync(CreateOrderRequest request) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Infrastructure\ECommerceAPI.Persistence\Services\OrderService.cs:line 51
+   at ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandHandler.Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Core\ECommerceAPI.Application\Features\Commands\Order\CreateOrder\CreateOrderCommandHandler.cs:line 22
+   at ECommerceAPI.API.Controllers.OrdersController.CreateOrder(CreateOrderCommandRequest request) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\OrdersController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 110
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-21 17:59:17.575 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/orders application/json 27 - 500 - text/plain;+charset=utf-8 178.9405ms
+2025-01-21 18:02:25.347 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:02:25.583 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:02:25.584 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:02:25.587 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:02:25.588 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:02:25.589 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:02:26.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:02:26.352 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 290.4285ms
+2025-01-21 18:02:26.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:02:26.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:02:26.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:02:26.403 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 13.3813ms
+2025-01-21 18:02:26.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 37.3578ms
+2025-01-21 18:02:26.474 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 84.7917ms
+2025-01-21 18:02:28.165 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:02:28.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 204.7984ms
+2025-01-21 18:02:31.233 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 18:02:31.264 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:02:31.304 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 18:02:33.073 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:02:33.528 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:02:33.650 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 18:02:33.683 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 18:02:33.708 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 2398.1682ms
+2025-01-21 18:02:33.711 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:02:33.727 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 2493.8298ms
+2025-01-21 18:02:41.664 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/orders application/json 27
+2025-01-21 18:02:41.757 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 18:02:41.764 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOrder(ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:02:41.971 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."AccessFailedCount", t."ConcurrencyStamp", t."Email", t."EmailConfirmed", t."FullName", t."LockoutEnabled", t."LockoutEnd", t."NormalizedEmail", t."NormalizedUserName", t."PasswordHash", t."PhoneNumber", t."PhoneNumberConfirmed", t."RefreshToken", t."RefreshTokenEndDate", t."SecurityStamp", t."TwoFactorEnabled", t."UserName", t."Id0", t."CreatedAt", t."UpdatedAt", t."UserId", b0."Id", b0."BasketId", b0."CreatedAt", b0."ProductId", b0."Quantity", b0."UpdatedAt"
+FROM (
+    SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id" AS "Id0", b."CreatedAt", b."UpdatedAt", b."UserId"
+    FROM "AspNetUsers" AS a
+    LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+    WHERE a."UserName" = @__username_0
+    LIMIT 1
+) AS t
+LEFT JOIN basket_items AS b0 ON t."Id0" = b0."BasketId"
+ORDER BY t."Id", t."Id0"
+2025-01-21 18:06:16.673 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:06:17.010 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:06:17.011 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:06:17.013 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:06:17.013 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:06:17.014 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:06:17.748 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:06:18.064 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 321.3431ms
+2025-01-21 18:06:18.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:06:18.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:06:18.093 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:06:18.100 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.5681ms
+2025-01-21 18:06:18.129 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 38.2775ms
+2025-01-21 18:06:18.160 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 66.7988ms
+2025-01-21 18:06:19.583 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:06:19.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 162.0113ms
+2025-01-21 18:06:22.127 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 18:06:22.152 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:06:22.192 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 18:06:23.469 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:06:23.810 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:06:23.912 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 18:06:23.929 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 18:06:23.946 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1749.5002ms
+2025-01-21 18:06:23.948 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:06:23.957 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1829.6610ms
+2025-01-21 18:06:33.425 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/orders application/json 27
+2025-01-21 18:06:33.495 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 18:06:33.502 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOrder(ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:06:33.651 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."AccessFailedCount", t."ConcurrencyStamp", t."Email", t."EmailConfirmed", t."FullName", t."LockoutEnabled", t."LockoutEnd", t."NormalizedEmail", t."NormalizedUserName", t."PasswordHash", t."PhoneNumber", t."PhoneNumberConfirmed", t."RefreshToken", t."RefreshTokenEndDate", t."SecurityStamp", t."TwoFactorEnabled", t."UserName", t."Id0", t."CreatedAt", t."UpdatedAt", t."UserId", t0."Id", t0."BasketId", t0."CreatedAt", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."CreatedAt0", t0."Description", t0."Name", t0."Price", t0."Stock", t0."UpdatedAt0"
+FROM (
+    SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id" AS "Id0", b."CreatedAt", b."UpdatedAt", b."UserId"
+    FROM "AspNetUsers" AS a
+    LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+    WHERE a."UserName" = @__username_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT b0."Id", b0."BasketId", b0."CreatedAt", b0."ProductId", b0."Quantity", b0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM basket_items AS b0
+    INNER JOIN products AS p ON b0."ProductId" = p."Id"
+) AS t0 ON t."Id0" = t0."BasketId"
+ORDER BY t."Id", t."Id0", t0."Id"
+2025-01-21 18:06:33.825 +03:00 [ERR] Failed executing DbCommand (19ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO orders ("Address", "CreatedAt", "OrderNumber", "Status", "TotalPrice", "UpdatedAt", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2025-01-21 18:06:33.883 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'ECommerceAPI.Persistence.Contexts.ECommerceAPIDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "UserId" of relation "orders" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|222_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "UserId" of relation "orders" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: orders
+    ColumnName: UserId
+    File: execMain.c
+    Line: 2009
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "UserId" of relation "orders" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|222_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "UserId" of relation "orders" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: orders
+    ColumnName: UserId
+    File: execMain.c
+    Line: 2009
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-21 18:06:34.081 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API) in 577.3825ms
+2025-01-21 18:06:34.083 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 18:06:34.169 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "UserId" of relation "orders" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|222_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "UserId" of relation "orders" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: orders
+    ColumnName: UserId
+    File: execMain.c
+    Line: 2009
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ECommerceAPI.Persistence.Repositories.WriteRepository`1.SaveAsync() in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Infrastructure\ECommerceAPI.Persistence\Repositories\WriteRepository.cs:line 62
+   at ECommerceAPI.Persistence.Services.OrderService.CreateOrderAsync(CreateOrderRequest request) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Infrastructure\ECommerceAPI.Persistence\Services\OrderService.cs:line 69
+   at ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandHandler.Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Core\ECommerceAPI.Application\Features\Commands\Order\CreateOrder\CreateOrderCommandHandler.cs:line 22
+   at ECommerceAPI.API.Controllers.OrdersController.CreateOrder(CreateOrderCommandRequest request) in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\OrdersController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 110
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-21 18:06:34.233 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/orders application/json 27 - 500 - text/plain;+charset=utf-8 807.6363ms
+2025-01-21 18:08:28.510 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:08:28.708 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:08:28.708 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:08:28.710 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:08:28.710 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:08:28.710 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:08:29.497 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:08:29.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 230.8559ms
+2025-01-21 18:08:29.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:08:29.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:08:29.742 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:08:29.756 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 14.7047ms
+2025-01-21 18:08:29.773 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 31.6671ms
+2025-01-21 18:08:29.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.4794ms
+2025-01-21 18:08:30.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:08:31.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.2241ms
+2025-01-21 18:08:49.345 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 18:08:49.361 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:08:49.392 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 18:08:50.553 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:08:50.911 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:08:50.999 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 18:08:51.016 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 18:08:51.031 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1634.0944ms
+2025-01-21 18:08:51.033 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:08:51.043 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1697.4217ms
+2025-01-21 18:08:59.305 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/orders application/json 27
+2025-01-21 18:08:59.382 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 18:08:59.388 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOrder(ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:08:59.555 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."AccessFailedCount", t."ConcurrencyStamp", t."Email", t."EmailConfirmed", t."FullName", t."LockoutEnabled", t."LockoutEnd", t."NormalizedEmail", t."NormalizedUserName", t."PasswordHash", t."PhoneNumber", t."PhoneNumberConfirmed", t."RefreshToken", t."RefreshTokenEndDate", t."SecurityStamp", t."TwoFactorEnabled", t."UserName", t."Id0", t."CreatedAt", t."UpdatedAt", t."UserId", t0."Id", t0."BasketId", t0."CreatedAt", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."CreatedAt0", t0."Description", t0."Name", t0."Price", t0."Stock", t0."UpdatedAt0"
+FROM (
+    SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id" AS "Id0", b."CreatedAt", b."UpdatedAt", b."UserId"
+    FROM "AspNetUsers" AS a
+    LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+    WHERE a."UserName" = @__username_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT b0."Id", b0."BasketId", b0."CreatedAt", b0."ProductId", b0."Quantity", b0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM basket_items AS b0
+    INNER JOIN products AS p ON b0."ProductId" = p."Id"
+) AS t0 ON t."Id0" = t0."BasketId"
+ORDER BY t."Id", t."Id0", t0."Id"
+2025-01-21 18:08:59.778 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO orders ("Address", "CreatedAt", "OrderNumber", "Status", "TotalPrice", "UpdatedAt", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2025-01-21 18:08:59.801 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Decimal), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = DateTime), @p13='?' (DbType = DateTime), @p14='?' (DbType = Int32), @p15='?' (DbType = Decimal), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO order_items ("CreatedAt", "OrderId", "Price", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id";
+INSERT INTO order_items ("CreatedAt", "OrderId", "Price", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p13, @p14, @p15, @p16, @p17, @p18)
+RETURNING "Id";
+2025-01-21 18:08:59.818 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandResponse'.
+2025-01-21 18:08:59.821 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API) in 431.8411ms
+2025-01-21 18:08:59.823 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 18:08:59.824 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/orders application/json 27 - 200 - application/json;+charset=utf-8 519.5067ms
+2025-01-21 18:09:25.668 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders - -
+2025-01-21 18:09:25.672 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:09:25.678 +03:00 [INF] Route matched with {action = "GetUserOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserOrders(ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:09:25.699 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:09:25.720 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."UserId" = @__user_Id_0
+ORDER BY o."Id", t."Id"
+2025-01-21 18:09:25.726 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 18:09:25.728 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API) in 47.897ms
+2025-01-21 18:09:25.729 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:09:25.730 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders - - - 200 - application/json;+charset=utf-8 62.1318ms
+2025-01-21 18:11:36.188 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7031/api/orders application/json 51
+2025-01-21 18:11:36.191 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 18:11:36.196 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:11:36.213 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-21 18:11:36.215 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API) in 18.1072ms
+2025-01-21 18:11:36.217 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 18:11:36.218 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7031/api/orders application/json 51 - 400 - application/json;+charset=utf-8 29.8201ms
+2025-01-21 18:29:56.585 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:29:56.901 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:29:56.902 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:29:56.904 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:29:56.905 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:29:56.906 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:29:57.737 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:29:57.933 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 196.2342ms
+2025-01-21 18:29:57.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:29:57.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:29:57.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:29:57.959 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.1375ms
+2025-01-21 18:29:57.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 34.4176ms
+2025-01-21 18:29:58.014 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.5318ms
+2025-01-21 18:29:59.077 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:29:59.238 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 160.8002ms
+2025-01-21 18:30:18.794 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:30:19.009 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:30:19.010 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:30:19.011 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:30:19.011 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:30:19.012 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:30:19.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:30:19.736 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 195.1726ms
+2025-01-21 18:30:19.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:30:19.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:30:19.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:30:19.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.8149ms
+2025-01-21 18:30:19.810 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 49.8914ms
+2025-01-21 18:30:19.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.1812ms
+2025-01-21 18:30:20.895 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:30:21.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.0733ms
+2025-01-21 18:30:25.446 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 18:30:25.466 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:30:25.504 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 18:30:26.740 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:30:27.082 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:30:27.171 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 18:30:27.187 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 18:30:27.204 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1695.4447ms
+2025-01-21 18:30:27.207 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:30:27.216 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1770.3069ms
+2025-01-21 18:30:42.200 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders - -
+2025-01-21 18:30:42.268 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:30:42.274 +03:00 [INF] Route matched with {action = "GetUserOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserOrders(ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:30:42.325 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:30:42.433 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."UserId" = @__user_Id_0
+ORDER BY o."Id", t."Id"
+2025-01-21 18:30:42.493 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryResponse'.
+2025-01-21 18:30:42.531 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API) in 254.0846ms
+2025-01-21 18:30:42.533 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:30:42.638 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 110
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-21 18:30:42.741 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders - - - 500 - text/plain;+charset=utf-8 541.0242ms
+2025-01-21 18:46:33.384 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:46:33.711 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:46:33.712 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:46:33.713 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:46:33.713 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:46:33.714 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:46:34.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:46:34.776 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 288.8443ms
+2025-01-21 18:46:34.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:46:34.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:46:34.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:46:34.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.5124ms
+2025-01-21 18:46:34.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 23.8907ms
+2025-01-21 18:46:34.843 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.5076ms
+2025-01-21 18:46:36.112 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:46:36.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 163.6730ms
+2025-01-21 18:47:42.102 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:47:42.299 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:47:42.300 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:47:42.301 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:47:42.302 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:47:42.302 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:47:42.727 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:47:42.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 167.9853ms
+2025-01-21 18:47:42.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:47:42.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:47:42.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:47:42.921 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.9842ms
+2025-01-21 18:47:42.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 26.6130ms
+2025-01-21 18:47:42.962 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.1886ms
+2025-01-21 18:47:44.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:47:44.248 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 139.6180ms
+2025-01-21 18:47:48.662 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 18:47:48.680 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:47:48.715 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 18:47:49.938 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:47:50.263 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:47:50.348 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 18:47:50.367 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 18:47:50.383 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1662.7445ms
+2025-01-21 18:47:50.385 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:47:50.393 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1731.3526ms
+2025-01-21 18:48:03.360 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders - -
+2025-01-21 18:48:03.430 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:48:03.436 +03:00 [INF] Route matched with {action = "GetUserOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserOrders(ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:48:03.484 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:48:03.594 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."UserId" = @__user_Id_0
+ORDER BY o."Id", t."Id"
+2025-01-21 18:48:03.653 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 18:48:03.663 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API) in 224.2911ms
+2025-01-21 18:48:03.665 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:48:03.666 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders - - - 200 - application/json;+charset=utf-8 306.3204ms
+2025-01-21 18:52:31.306 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:52:31.509 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:52:31.510 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:52:31.511 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:52:31.512 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:52:31.512 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:52:32.212 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:52:32.388 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 178.3436ms
+2025-01-21 18:52:32.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:52:32.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:52:32.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:52:32.418 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.0639ms
+2025-01-21 18:52:32.443 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 33.7025ms
+2025-01-21 18:52:32.474 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.2077ms
+2025-01-21 18:52:33.465 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:52:33.618 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 153.1322ms
+2025-01-21 18:52:37.944 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 18:52:37.958 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:52:37.980 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 18:52:39.400 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:52:39.744 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:52:39.834 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 18:52:39.850 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 18:52:39.865 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1880.3685ms
+2025-01-21 18:52:39.867 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:52:39.876 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1931.8886ms
+2025-01-21 18:52:46.807 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders - -
+2025-01-21 18:52:46.868 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:52:46.874 +03:00 [INF] Route matched with {action = "GetUserOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserOrders(ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:52:46.922 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:52:47.022 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."UserId" = @__user_Id_0
+ORDER BY o."Id", t."Id"
+2025-01-21 18:52:47.082 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 18:52:47.116 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API) in 239.31ms
+2025-01-21 18:52:47.120 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:52:47.225 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.OrderItems.Order.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.User.Orders.OrderNumber.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 110
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-21 18:52:47.340 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders - - - 500 - text/plain;+charset=utf-8 533.4906ms
+2025-01-21 18:55:48.789 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 18:55:48.971 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 18:55:48.973 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 18:55:48.975 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 18:55:48.976 +03:00 [INF] Hosting environment: Development
+2025-01-21 18:55:48.976 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 18:55:49.845 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 18:55:50.068 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 227.1821ms
+2025-01-21 18:55:50.088 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 18:55:50.088 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 18:55:50.088 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 18:55:50.095 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.2577ms
+2025-01-21 18:55:50.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 23.8133ms
+2025-01-21 18:55:50.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.1090ms
+2025-01-21 18:55:51.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 18:55:51.192 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.7337ms
+2025-01-21 18:55:54.815 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 18:55:54.829 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:55:54.853 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 18:55:55.866 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:55:56.180 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:55:56.266 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 18:55:56.283 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 18:55:56.300 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1442.099ms
+2025-01-21 18:55:56.302 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 18:55:56.311 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1495.9595ms
+2025-01-21 18:56:03.608 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders - -
+2025-01-21 18:56:03.669 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:56:03.674 +03:00 [INF] Route matched with {action = "GetUserOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserOrders(ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 18:56:03.724 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 18:56:03.822 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."UserId" = @__user_Id_0
+ORDER BY o."Id", t."Id"
+2025-01-21 18:56:03.882 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 18:56:03.905 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API) in 228.8279ms
+2025-01-21 18:56:03.906 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 18:56:03.907 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders - - - 200 - application/json;+charset=utf-8 298.8835ms
+2025-01-21 20:32:02.850 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 20:32:03.135 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 20:32:03.135 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 20:32:03.137 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 20:32:03.137 +03:00 [INF] Hosting environment: Development
+2025-01-21 20:32:03.138 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 20:32:04.010 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 20:32:04.288 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 280.2849ms
+2025-01-21 20:32:04.310 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 20:32:04.310 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 20:32:04.310 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 20:32:04.320 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.7121ms
+2025-01-21 20:32:04.346 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 35.7656ms
+2025-01-21 20:32:04.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 67.6626ms
+2025-01-21 20:32:05.484 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 20:32:05.686 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 201.4437ms
+2025-01-21 20:32:32.704 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 20:32:32.725 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:32:32.763 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 20:32:33.975 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:32:34.322 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:32:34.411 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 20:32:34.428 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 20:32:34.446 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1677.8074ms
+2025-01-21 20:32:34.448 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:32:34.462 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1757.7795ms
+2025-01-21 20:32:52.983 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/orders application/json 31
+2025-01-21 20:32:53.080 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 20:32:53.085 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOrder(ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 20:32:53.242 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."AccessFailedCount", t."ConcurrencyStamp", t."Email", t."EmailConfirmed", t."FullName", t."LockoutEnabled", t."LockoutEnd", t."NormalizedEmail", t."NormalizedUserName", t."PasswordHash", t."PhoneNumber", t."PhoneNumberConfirmed", t."RefreshToken", t."RefreshTokenEndDate", t."SecurityStamp", t."TwoFactorEnabled", t."UserName", t."Id0", t."CreatedAt", t."UpdatedAt", t."UserId", t0."Id", t0."BasketId", t0."CreatedAt", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."CreatedAt0", t0."Description", t0."Name", t0."Price", t0."Stock", t0."UpdatedAt0"
+FROM (
+    SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", b."Id" AS "Id0", b."CreatedAt", b."UpdatedAt", b."UserId"
+    FROM "AspNetUsers" AS a
+    LEFT JOIN baskets AS b ON a."Id" = b."UserId"
+    WHERE a."UserName" = @__username_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT b0."Id", b0."BasketId", b0."CreatedAt", b0."ProductId", b0."Quantity", b0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM basket_items AS b0
+    INNER JOIN products AS p ON b0."ProductId" = p."Id"
+) AS t0 ON t."Id0" = t0."BasketId"
+ORDER BY t."Id", t."Id0", t0."Id"
+2025-01-21 20:32:53.411 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO orders ("Address", "CreatedAt", "OrderNumber", "Status", "TotalPrice", "UpdatedAt", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2025-01-21 20:32:53.430 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p7='?' (DbType = DateTime), @p8='?' (DbType = Int32), @p9='?' (DbType = Decimal), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = DateTime), @p13='?' (DbType = DateTime), @p14='?' (DbType = Int32), @p15='?' (DbType = Decimal), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO order_items ("CreatedAt", "OrderId", "Price", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id";
+INSERT INTO order_items ("CreatedAt", "OrderId", "Price", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p13, @p14, @p15, @p16, @p17, @p18)
+RETURNING "Id";
+2025-01-21 20:32:53.447 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandResponse'.
+2025-01-21 20:32:53.449 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API) in 361.449ms
+2025-01-21 20:32:53.450 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.CreateOrder (ECommerceAPI.API)'
+2025-01-21 20:32:53.452 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/orders application/json 31 - 200 - application/json;+charset=utf-8 468.6575ms
+2025-01-21 20:33:17.525 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders - -
+2025-01-21 20:33:17.530 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 20:33:17.534 +03:00 [INF] Route matched with {action = "GetUserOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserOrders(ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 20:33:17.556 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:33:17.583 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."UserId" = @__user_Id_0
+ORDER BY o."Id", t."Id"
+2025-01-21 20:33:17.591 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 20:33:17.606 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API) in 69.9821ms
+2025-01-21 20:33:17.608 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 20:33:17.609 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders - - - 200 - application/json;+charset=utf-8 83.7693ms
+2025-01-21 20:43:35.290 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 20:43:35.532 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 20:43:35.533 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 20:43:35.534 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 20:43:35.535 +03:00 [INF] Hosting environment: Development
+2025-01-21 20:43:35.535 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 20:43:36.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 20:43:36.629 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 280.8649ms
+2025-01-21 20:43:36.675 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 20:43:36.675 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 20:43:36.675 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 20:43:36.685 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.5562ms
+2025-01-21 20:43:36.728 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 52.9991ms
+2025-01-21 20:43:36.774 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 98.8656ms
+2025-01-21 20:43:37.966 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 20:43:38.115 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 148.9659ms
+2025-01-21 20:43:45.289 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 20:43:45.303 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:43:45.335 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 20:43:46.585 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:43:46.934 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:43:47.031 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 20:43:47.048 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 20:43:47.065 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1723.8514ms
+2025-01-21 20:43:47.066 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:43:47.075 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1786.6339ms
+2025-01-21 20:43:56.696 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders - -
+2025-01-21 20:43:57.319 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 20:43:57.328 +03:00 [INF] Route matched with {action = "GetUserOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserOrders(ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 20:43:57.402 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:43:57.510 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."UserId" = @__user_Id_0
+ORDER BY o."Id", t."Id"
+2025-01-21 20:43:57.570 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetUserOrders.GetUserOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 20:43:57.582 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API) in 251.4016ms
+2025-01-21 20:43:57.583 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetUserOrders (ECommerceAPI.API)'
+2025-01-21 20:43:57.584 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders - - - 200 - application/json;+charset=utf-8 888.0858ms
+2025-01-21 20:51:59.431 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 20:51:59.708 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 20:51:59.710 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 20:51:59.712 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 20:51:59.713 +03:00 [INF] Hosting environment: Development
+2025-01-21 20:51:59.713 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 20:52:00.394 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 20:52:00.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 258.7716ms
+2025-01-21 20:52:00.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 20:52:00.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 20:52:00.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 20:52:00.684 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.6211ms
+2025-01-21 20:52:00.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 56.5506ms
+2025-01-21 20:52:00.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.7801ms
+2025-01-21 20:52:01.857 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 20:52:01.998 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 141.6508ms
+2025-01-21 20:52:08.547 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 20:52:08.562 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:52:08.598 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 20:52:09.791 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:52:10.142 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:52:10.239 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 20:52:10.258 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 20:52:10.274 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1671.4102ms
+2025-01-21 20:52:10.276 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:52:10.285 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1738.0428ms
+2025-01-21 20:52:24.233 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders/getAll - -
+2025-01-21 20:52:24.298 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetAllOrders (ECommerceAPI.API)'
+2025-01-21 20:52:24.306 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ECommerceAPI.Application.Features.Queries.Order.GetAllOrders.GetAllOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 20:52:24.456 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+INNER JOIN "AspNetUsers" AS a ON o."UserId" = a."Id"
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+ORDER BY o."CreatedAt" DESC, o."Id", a."Id", t."Id"
+2025-01-21 20:52:24.522 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetAllOrders.GetAllOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 20:52:24.532 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetAllOrders (ECommerceAPI.API) in 224.6367ms
+2025-01-21 20:52:24.535 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetAllOrders (ECommerceAPI.API)'
+2025-01-21 20:52:24.537 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders/getAll - - - 200 - application/json;+charset=utf-8 304.0546ms
+2025-01-21 20:52:34.937 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders/getAl - -
+2025-01-21 20:52:34.940 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders/getAl - - - 404 0 - 3.1445ms
+2025-01-21 20:52:37.349 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7031/api/orders/getAll - -
+2025-01-21 20:52:37.353 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetAllOrders (ECommerceAPI.API)'
+2025-01-21 20:52:37.354 +03:00 [INF] Route matched with {action = "GetAllOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders(ECommerceAPI.Application.Features.Queries.Order.GetAllOrders.GetAllOrdersQueryRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 20:52:37.370 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."CreatedAt0", t."Description", t."Name", t."Price0", t."Stock", t."UpdatedAt0"
+FROM orders AS o
+INNER JOIN "AspNetUsers" AS a ON o."UserId" = a."Id"
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."Stock", p."UpdatedAt" AS "UpdatedAt0"
+    FROM order_items AS o0
+    INNER JOIN products AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+ORDER BY o."CreatedAt" DESC, o."Id", a."Id", t."Id"
+2025-01-21 20:52:37.373 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ECommerceAPI.Application.Features.Queries.Order.GetAllOrders.GetAllOrdersQueryResponse, ECommerceAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-21 20:52:37.374 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.GetAllOrders (ECommerceAPI.API) in 16.9966ms
+2025-01-21 20:52:37.375 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.GetAllOrders (ECommerceAPI.API)'
+2025-01-21 20:52:37.376 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7031/api/orders/getAll - - - 200 - application/json;+charset=utf-8 26.4011ms
+2025-01-21 20:56:59.883 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 20:57:00.107 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 20:57:00.109 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 20:57:00.110 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 20:57:00.111 +03:00 [INF] Hosting environment: Development
+2025-01-21 20:57:00.112 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 20:57:00.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 20:57:01.129 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 256.3251ms
+2025-01-21 20:57:01.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 20:57:01.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 20:57:01.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 20:57:01.161 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.4310ms
+2025-01-21 20:57:01.183 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 30.7805ms
+2025-01-21 20:57:01.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.8092ms
+2025-01-21 20:57:02.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 20:57:02.512 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.4929ms
+2025-01-21 20:57:04.507 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 20:57:04.521 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:57:04.544 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 20:57:05.957 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:57:06.362 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 20:57:06.449 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 20:57:06.466 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 20:57:06.483 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1933.2805ms
+2025-01-21 20:57:06.485 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 20:57:06.496 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1989.5361ms
+2025-01-21 20:57:48.245 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7031/api/orders application/json 51
+2025-01-21 20:57:48.314 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 20:57:48.320 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 20:57:48.337 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-21 20:57:48.340 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API) in 18.2407ms
+2025-01-21 20:57:48.342 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 20:57:48.344 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7031/api/orders application/json 51 - 400 - application/json;+charset=utf-8 98.9911ms
+2025-01-21 21:01:11.797 +03:00 [INF] User profile is available. Using 'C:\Users\asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-21 21:01:12.031 +03:00 [INF] Now listening on: https://localhost:7031
+2025-01-21 21:01:12.032 +03:00 [INF] Now listening on: http://localhost:5026
+2025-01-21 21:01:12.033 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-21 21:01:12.034 +03:00 [INF] Hosting environment: Development
+2025-01-21 21:01:12.034 +03:00 [INF] Content root path: C:\Users\asus\OneDrive\Masaüstü\repos\E-Commerce\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-01-21 21:01:12.781 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - -
+2025-01-21 21:01:12.941 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 161.6412ms
+2025-01-21 21:01:12.970 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - -
+2025-01-21 21:01:12.970 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - -
+2025-01-21 21:01:12.970 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.js - -
+2025-01-21 21:01:12.983 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.js - - - 200 - application/javascript;charset=utf-8 12.6046ms
+2025-01-21 21:01:13.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - - - 200 13768 application/javascript;+charset=utf-8 40.1923ms
+2025-01-21 21:01:13.044 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 73.4612ms
+2025-01-21 21:01:14.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - -
+2025-01-21 21:01:14.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.5818ms
+2025-01-21 21:01:16.637 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68
+2025-01-21 21:01:16.652 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 21:01:16.674 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandRequest) on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-01-21 21:01:17.824 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 21:01:18.151 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-01-21 21:01:18.262 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FullName" = @p4, "LockoutEnabled" = @p5, "LockoutEnd" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-01-21 21:01:18.282 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.User.LoginUser.LoginUserCommandResponse'.
+2025-01-21 21:01:18.298 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API) in 1620.074ms
+2025-01-21 21:01:18.300 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.LoginUser (ECommerceAPI.API)'
+2025-01-21 21:01:18.312 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7031/api/users/login application/json 68 - 200 - application/json;+charset=utf-8 1674.4613ms
+2025-01-21 21:01:28.516 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7031/api/orders application/json 51
+2025-01-21 21:01:28.584 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:28.589 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 21:01:28.654 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId"
+FROM orders AS o
+WHERE o."Id" = @__id_0
+LIMIT 1
+2025-01-21 21:01:28.699 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE orders SET "Address" = @p0, "CreatedAt" = @p1, "OrderNumber" = @p2, "Status" = @p3, "TotalPrice" = @p4, "UpdatedAt" = @p5, "UserId" = @p6
+WHERE "Id" = @p7;
+2025-01-21 21:01:28.703 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandResponse'.
+2025-01-21 21:01:28.705 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API) in 112.7604ms
+2025-01-21 21:01:28.706 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:28.708 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7031/api/orders application/json 51 - 200 - application/json;+charset=utf-8 191.6430ms
+2025-01-21 21:01:40.964 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7031/api/orders application/json 43
+2025-01-21 21:01:40.970 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:40.971 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 21:01:40.983 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-21 21:01:40.987 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API) in 14.2442ms
+2025-01-21 21:01:40.989 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:40.990 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7031/api/orders application/json 43 - 400 - application/json;+charset=utf-8 25.3029ms
+2025-01-21 21:01:46.368 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7031/api/orders application/json 46
+2025-01-21 21:01:46.371 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:46.373 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 21:01:46.375 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-21 21:01:46.377 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API) in 2.7212ms
+2025-01-21 21:01:46.378 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:46.379 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7031/api/orders application/json 46 - 400 - application/json;+charset=utf-8 10.7005ms
+2025-01-21 21:01:51.953 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7031/api/orders application/json 50
+2025-01-21 21:01:51.954 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:51.956 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandRequest) on controller ECommerceAPI.API.Controllers.OrdersController (ECommerceAPI.API).
+2025-01-21 21:01:51.978 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreatedAt", o."OrderNumber", o."Status", o."TotalPrice", o."UpdatedAt", o."UserId"
+FROM orders AS o
+WHERE o."Id" = @__id_0
+LIMIT 1
+2025-01-21 21:01:51.986 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE orders SET "Address" = @p0, "CreatedAt" = @p1, "OrderNumber" = @p2, "Status" = @p3, "TotalPrice" = @p4, "UpdatedAt" = @p5, "UserId" = @p6
+WHERE "Id" = @p7;
+2025-01-21 21:01:51.992 +03:00 [INF] Executing OkObjectResult, writing value of type 'ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus.UpdateOrderStatusCommandResponse'.
+2025-01-21 21:01:51.994 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API) in 34.7348ms
+2025-01-21 21:01:51.997 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.OrdersController.UpdateOrderStatus (ECommerceAPI.API)'
+2025-01-21 21:01:51.999 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7031/api/orders application/json 50 - 200 - application/json;+charset=utf-8 45.9790ms

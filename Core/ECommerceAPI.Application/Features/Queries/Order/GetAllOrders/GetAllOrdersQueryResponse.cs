@@ -1,15 +1,13 @@
-﻿using ECommerceAPI.Domain.Entities.Identity;
-using ECommerceAPI.Domain.Entities;
+﻿using ECommerceAPI.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ECommerceAPI.Application.DTOs;
 
-namespace ECommerceAPI.Application.Features.Queries.Order.GetUserOrders
+namespace ECommerceAPI.Application.Features.Queries.Order.GetAllOrders
 {
-    public class GetUserOrdersQueryResponse
+    public class GetAllOrdersQueryResponse
     {
         public int Id { get; set; }
         public string OrderNumber { get; set; }
