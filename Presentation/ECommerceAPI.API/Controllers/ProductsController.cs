@@ -24,7 +24,7 @@ namespace ECommerceAPI.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
-            GetAllProductQueryResponse response = await _mediator.Send(new GetAllProductQueryRequest());
+            List<GetAllProductQueryResponse> response = await _mediator.Send(new GetAllProductQueryRequest());
             return Ok(response);
         }
 

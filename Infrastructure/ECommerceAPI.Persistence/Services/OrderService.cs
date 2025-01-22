@@ -21,13 +21,15 @@ namespace ECommerceAPI.Persistence.Services
         private readonly UserManager<User> _userManager;
         private readonly IOrderReadRepository _orderReadRepository;
         private readonly IOrderWriteRepository _orderWriteRepository;
+        private readonly IMailService _mailService;
 
-        public OrderService(IHttpContextAccessor httpContextAccessor, UserManager<User> userManager, IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository)
+        public OrderService(IHttpContextAccessor httpContextAccessor, UserManager<User> userManager, IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, IMailService mailService)
         {
             _httpContextAccessor = httpContextAccessor;
             _userManager = userManager;
             _orderReadRepository = orderReadRepository;
             _orderWriteRepository = orderWriteRepository;
+            _mailService = mailService;
         }
 
         private string GenerateOrderNumber()
@@ -65,6 +67,11 @@ namespace ECommerceAPI.Persistence.Services
                     Price = bi.Product.Price
                 }).ToList()
             };
+
+            string subject = "Order Information";
+            string body = $"Dear {user.FullName},<p>Your order has been successfully created.</p>";
+
+            await _mailService.SendMailAsync(user.Email, subject, body);
 
             await _orderWriteRepository.AddAsync(order);
             await _orderWriteRepository.SaveAsync();

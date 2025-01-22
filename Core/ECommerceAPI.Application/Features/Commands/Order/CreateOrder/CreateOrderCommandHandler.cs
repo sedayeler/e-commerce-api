@@ -1,4 +1,5 @@
-﻿using ECommerceAPI.Application.Abstractions.Services;
+﻿using ECommerceAPI.Application.Abstractions.Hubs;
+using ECommerceAPI.Application.Abstractions.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,13 @@ namespace ECommerceAPI.Application.Features.Commands.Order.CreateOrder
 {
     public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommandRequest, CreateOrderCommandResponse>
     {
-        public readonly IOrderService _orderService;
+        private readonly IOrderService _orderService;
+        private readonly IOrderHubService _orderHubService;
 
-        public CreateOrderCommandHandler(IOrderService orderService)
+        public CreateOrderCommandHandler(IOrderService orderService, IOrderHubService orderHubService)
         {
             _orderService = orderService;
+            _orderHubService = orderHubService;
         }
 
         public async Task<CreateOrderCommandResponse> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
@@ -24,6 +27,7 @@ namespace ECommerceAPI.Application.Features.Commands.Order.CreateOrder
                 Address = request.Address
             });
 
+            await _orderHubService.OrderCreatedMessageAsync("A new order has been created.");
             return new();
         }
     }

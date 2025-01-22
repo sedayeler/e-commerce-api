@@ -1,4 +1,6 @@
-﻿using ECommerceAPI.Application.Abstractions.Token;
+﻿using ECommerceAPI.Application.Abstractions.Services;
+using ECommerceAPI.Application.Abstractions.Token;
+using ECommerceAPI.Infrastructure.Services;
 using ECommerceAPI.Infrastructure.Services.Token;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,6 +16,7 @@ namespace ECommerceAPI.Infrastructure
         public static void AddInfrastructureService(this IServiceCollection services)
         {
             services.AddScoped<ITokenHandler, TokenHandler>();
+            services.AddScoped<IMailService, MailService>();
         }
     }
 }

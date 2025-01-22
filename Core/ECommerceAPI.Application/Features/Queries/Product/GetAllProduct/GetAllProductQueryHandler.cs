@@ -3,7 +3,7 @@ using MediatR;
 
 namespace ECommerceAPI.Application.Features.Queries.Product.GetAllProduct
 {
-    public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, GetAllProductQueryResponse>
+    public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, List<GetAllProductQueryResponse>>
     {
         private readonly IProductReadRepository _productReadRepository;
 
@@ -12,14 +12,18 @@ namespace ECommerceAPI.Application.Features.Queries.Product.GetAllProduct
             _productReadRepository = productReadRepository;
         }
 
-        public async Task<GetAllProductQueryResponse> Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken)
+        public async Task<List<GetAllProductQueryResponse>> Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken)
         {
             var products = _productReadRepository.GetAll(false).ToList();
 
-            return new()
+            return products.Select(p => new GetAllProductQueryResponse
             {
-                Products = products
-            };
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                Price = p.Price,
+                Stock = p.Stock
+            }).ToList();
         }
     }
 }

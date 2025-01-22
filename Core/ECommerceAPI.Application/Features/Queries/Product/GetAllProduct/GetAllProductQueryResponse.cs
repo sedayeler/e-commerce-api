@@ -9,6 +9,10 @@ namespace ECommerceAPI.Application.Features.Queries.Product.GetAllProduct
 {
     public class GetAllProductQueryResponse
     {
-        public List<ECommerceAPI.Domain.Entities.Product> Products { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public int Stock { get; set; }
     }
 }

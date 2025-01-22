@@ -53,7 +53,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 Logger log = new LoggerConfiguration()
     .WriteTo.Console()
-    .WriteTo.File("logs/log.txt")
+    //.WriteTo.File("logs/log.txt")
     .WriteTo.PostgreSQL(builder.Configuration.GetConnectionString("PostgreSQL"), "logs", needAutoCreateTable: true,
     columnOptions: new Dictionary<string, ColumnWriterBase>
     {
