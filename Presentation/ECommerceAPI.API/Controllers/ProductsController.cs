@@ -1,8 +1,11 @@
-﻿using ECommerceAPI.Application.Features.Commands.Product.CreateProduct;
+﻿using ECommerceAPI.Application.Consts;
+using ECommerceAPI.Application.CustomAttributes;
+using ECommerceAPI.Application.Features.Commands.Product.CreateProduct;
 using ECommerceAPI.Application.Features.Commands.Product.DeleteProduct;
 using ECommerceAPI.Application.Features.Commands.Product.UpdateProduct;
 using ECommerceAPI.Application.Features.Queries.Product.GetAllProduct;
 using ECommerceAPI.Application.Features.Queries.Product.GetByIdProduct;
+using ECommerceAPI.Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +14,6 @@ namespace ECommerceAPI.API.Controllers
 {
     [Route("api/products")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = "Admin")]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -36,6 +38,8 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Writing, Definition = "Create product")]
         public async Task<IActionResult> CreateProduct(CreateProductCommandRequest request)
         {
             CreateProductCommandResponse response = await _mediator.Send(request);
@@ -43,6 +47,8 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPut]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Updating, Definition = "Update product")]
         public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
         {
             UpdateProductCommandResponse response = await _mediator.Send(request);
@@ -50,6 +56,8 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpDelete("{Id}")]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Deleting, Definition = "Delete product")]
         public async Task<IActionResult> DeleteProduct([FromRoute] DeleteProductCommandRequest request)
         {
             DeleteProductCommandResponse response = await _mediator.Send(request);

@@ -69,7 +69,7 @@ namespace ECommerceAPI.Persistence.Services
             };
 
             string subject = "Order Information";
-            string body = $"Dear {user.FullName},<p>Your order has been successfully created.</p>";
+            string body = $"Dear {user.FullName},<p>Your order with number {order.OrderNumber} has been successfully created.</p>";
 
             await _mailService.SendMailAsync(user.Email, subject, body);
 
