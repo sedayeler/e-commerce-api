@@ -24,7 +24,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.baskets, ActionType = ActionType.Reading, Definition = "Get Basket Items")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.baskets, ActionType = ActionType.Reading, Definition = "Get basket items")]
         public async Task<IActionResult> GetBasketItems([FromQuery] GetBasketItemsQueryRequest request)
         {
             List<GetBasketItemsQueryResponse> response = await _mediator.Send(request);

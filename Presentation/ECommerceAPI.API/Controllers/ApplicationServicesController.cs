@@ -1,5 +1,6 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
 using ECommerceAPI.Application.CustomAttributes;
+using ECommerceAPI.Domain.Enums;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet]
-        [AuthorizeDefinition(ActionType = Domain.Enums.ActionType.Reading, Definition = "Get Authorize Definition Endpoints")]
+        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get authorize definition endpoints")]
         public IActionResult GetAuthorizeDefinitionEndpoints()
         {
             var datas = _applicationService.GetAuthorizeDefinitionEndpoints(typeof(Program));
