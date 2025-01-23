@@ -1,4 +1,4 @@
-﻿using ECommerceAPI.Application.DTOs.User;
+﻿using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities.Identity;
 using System;
 using System.Collections.Generic;

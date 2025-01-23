@@ -29,8 +29,10 @@ namespace ECommerceAPI.Application.Features.Commands.Product.CreateProduct
                 Price = request.Price,
                 Stock = request.Stock
             });
+
             await _productWriteRepository.SaveAsync();
             await _productHubService.ProductAddedMessageAsync($"{request.Name} has been added successfully.");
+
             return new();
         }
     }

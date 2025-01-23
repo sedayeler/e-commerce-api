@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerceAPI.Application.DTOs.Order
+namespace ECommerceAPI.Application.DTOs
 {
     public class UpdateOrderStatusRequest
     {

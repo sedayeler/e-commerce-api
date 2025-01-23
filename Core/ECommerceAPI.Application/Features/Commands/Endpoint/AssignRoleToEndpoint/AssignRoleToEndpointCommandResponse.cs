@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerceAPI.Application.DTOs
+namespace ECommerceAPI.Application.Features.Commands.Endpoint.AssignRoleToEndpoint
 {
-    public class CreateOrderRequest
+    public class AssignRoleToEndpointCommandResponse
     {
-        public string Address { get; set; }
     }
 }

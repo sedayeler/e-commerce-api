@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerceAPI.Application.Features.Queries.Product.GetAllProduct
+namespace ECommerceAPI.Application.Features.Queries.Product.GetAllProducts
 {
-    public class GetAllProductQueryResponse
+    public class GetAllProductsQueryResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }

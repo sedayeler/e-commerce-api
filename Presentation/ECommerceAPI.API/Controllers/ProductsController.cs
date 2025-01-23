@@ -3,7 +3,7 @@ using ECommerceAPI.Application.CustomAttributes;
 using ECommerceAPI.Application.Features.Commands.Product.CreateProduct;
 using ECommerceAPI.Application.Features.Commands.Product.DeleteProduct;
 using ECommerceAPI.Application.Features.Commands.Product.UpdateProduct;
-using ECommerceAPI.Application.Features.Queries.Product.GetAllProduct;
+using ECommerceAPI.Application.Features.Queries.Product.GetAllProducts;
 using ECommerceAPI.Application.Features.Queries.Product.GetByIdProduct;
 using ECommerceAPI.Domain.Enums;
 using MediatR;
@@ -26,7 +26,7 @@ namespace ECommerceAPI.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
-            List<GetAllProductQueryResponse> response = await _mediator.Send(new GetAllProductQueryRequest());
+            List<GetAllProductsQueryResponse> response = await _mediator.Send(new GetAllProductsQueryRequest());
             return Ok(response);
         }
 

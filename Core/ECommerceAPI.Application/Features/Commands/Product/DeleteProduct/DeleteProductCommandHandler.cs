@@ -21,6 +21,7 @@ namespace ECommerceAPI.Application.Features.Commands.Product.DeleteProduct
         {
             await _productWriteRepository.RemoveAsync(request.Id);
             await _productWriteRepository.SaveAsync();
+
             return new();
         }
     }

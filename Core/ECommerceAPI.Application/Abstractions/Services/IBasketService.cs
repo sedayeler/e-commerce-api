@@ -1,4 +1,4 @@
-﻿using ECommerceAPI.Application.DTOs.Basket;
+﻿using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;

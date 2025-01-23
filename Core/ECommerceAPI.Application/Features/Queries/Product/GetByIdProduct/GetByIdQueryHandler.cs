@@ -20,6 +20,7 @@ namespace ECommerceAPI.Application.Features.Queries.Product.GetByIdProduct
         public async Task<GetByIdQueryResponse> Handle(GetByIdQueryRequest request, CancellationToken cancellationToken)
         {
             var product = await _productReadRepository.GetByIdAsync(request.Id, false);
+
             return new()
             {
                 Id = product.Id,

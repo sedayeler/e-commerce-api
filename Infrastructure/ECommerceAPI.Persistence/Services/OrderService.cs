@@ -1,5 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
-using ECommerceAPI.Application.DTOs.Order;
+using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Application.Repositories;
 using ECommerceAPI.Domain.Entities;
 using ECommerceAPI.Domain.Entities.Identity;

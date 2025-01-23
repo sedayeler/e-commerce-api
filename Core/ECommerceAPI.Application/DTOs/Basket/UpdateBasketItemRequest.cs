@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerceAPI.Application.DTOs.Basket
+namespace ECommerceAPI.Application.DTOs
 {
     public class UpdateBasketItemRequest
     {

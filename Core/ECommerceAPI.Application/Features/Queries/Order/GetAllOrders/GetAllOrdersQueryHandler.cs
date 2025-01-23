@@ -1,5 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
-using ECommerceAPI.Domain.Entities;
+using ECommerceAPI.Application.DTOs;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -30,7 +30,7 @@ namespace ECommerceAPI.Application.Features.Queries.Order.GetAllOrders
                 Status = o.Status,
                 TotalPrice = o.TotalPrice,
                 UserId = o.UserId,
-                OrderItems = o.OrderItems.Select(oi => new DTOs.ListOrderItem
+                OrderItems = o.OrderItems.Select(oi => new ListOrderItem
                 {
                     ProductName = oi.Product.Name,
                     ProductId = oi.Product.Id,

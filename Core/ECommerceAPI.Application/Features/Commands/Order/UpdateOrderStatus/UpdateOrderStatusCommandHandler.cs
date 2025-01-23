@@ -22,7 +22,7 @@ namespace ECommerceAPI.Application.Features.Commands.Order.UpdateOrderStatus
             await _orderService.UpdateOrderStatusAsync(new()
             {
                 OrderId = request.OrderId,
-                OrderStatus = request.OrderStatus,
+                OrderStatus = request.OrderStatus
             });
 
             return new();

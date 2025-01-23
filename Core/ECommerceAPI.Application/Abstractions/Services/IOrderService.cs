@@ -1,4 +1,4 @@
-﻿using ECommerceAPI.Application.DTOs.Order;
+﻿using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;

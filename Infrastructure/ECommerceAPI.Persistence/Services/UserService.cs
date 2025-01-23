@@ -1,6 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
-using ECommerceAPI.Application.DTOs.User;
-using ECommerceAPI.Application.Features.Commands.User.CreateUser;
+using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using System;

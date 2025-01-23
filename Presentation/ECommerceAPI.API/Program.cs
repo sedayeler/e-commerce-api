@@ -29,9 +29,9 @@ builder.Services.AddFluentValidationAutoValidation();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddPersistenceServices();
-builder.Services.AddInfrastructureService();
-builder.Services.AddApplicationService();
-builder.Services.AddSignalRService();
+builder.Services.AddInfrastructureServices();
+builder.Services.AddApplicationServices();
+builder.Services.AddSignalRServices();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer("Admin", options =>
