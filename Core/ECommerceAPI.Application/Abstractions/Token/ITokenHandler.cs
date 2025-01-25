@@ -1,15 +1,11 @@
-﻿using ECommerceAPI.Domain.Entities.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ECommerceAPI.Application.DTOs;
+using ECommerceAPI.Domain.Entities.Identity;
 
-namespace ECommerceAPI.Application.Abstractions.Token
+namespace ECommerceAPI.Application.Abstractions
 {
     public interface ITokenHandler
     {
-        DTOs.Token CreateAccessToken(int minute, User user);
+        Token CreateAccessToken(int minute, User user);
         string CreateRefreshToken();
     }
 }

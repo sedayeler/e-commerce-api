@@ -1,5 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
-using ECommerceAPI.Domain.Entities.Identity;
+using ECommerceAPI.Application.DTOs;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace ECommerceAPI.Application.Features.Queries.Role.GetAllRoles
 
         public async Task<List<GetAllRolesQueryResponse>> Handle(GetAllRolesQueryRequest request, CancellationToken cancellationToken)
         {
-            List<Domain.Entities.Identity.Role> roles = await _roleService.GetAllRolesAsync();
+            List<ListRole> roles = await _roleService.GetAllRolesAsync();
 
             return roles.Select(role => new GetAllRolesQueryResponse
             {

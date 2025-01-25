@@ -1,5 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
-using ECommerceAPI.Application.Abstractions.Token;
+using ECommerceAPI.Application.Abstractions;
 using ECommerceAPI.Infrastructure.Services;
 using ECommerceAPI.Infrastructure.Services.Token;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,7 +17,7 @@ namespace ECommerceAPI.Infrastructure
         {
             services.AddScoped<ITokenHandler, TokenHandler>();
             services.AddScoped<IMailService, MailService>();
-            services.AddScoped<IApplicationService, ApplicationService>();
+            services.AddScoped<IAppService, ApplicationService>();
         }
     }
 }

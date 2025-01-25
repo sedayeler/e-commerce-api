@@ -56,7 +56,7 @@ namespace ECommerceAPI.Persistence.Services
             return basket;
         }
 
-        public async Task<List<BasketItem>> GetBasketItemsAsync()
+        public async Task<List<ListBasketItem>> GetBasketItemsAsync()
         {
             Basket basket = await UserBasket();
 
@@ -65,11 +65,18 @@ namespace ECommerceAPI.Persistence.Services
                 .ThenInclude(bi => bi.Product)
                 .FirstOrDefaultAsync(b => b.Id == basket.Id);
 
-            return result.BasketItems.ToList();
+            return result.BasketItems.Select(bi => new ListBasketItem
+            {
+                Id = bi.Id,
+                Quantity = bi.Quantity,
+                BasketId = bi.BasketId, 
+                ProductId = bi.ProductId,
+                Product = bi.Product
+            }).ToList();
         }
 
         public async Task AddItemToBasketAsync(CreateBasketItemRequest request)
-            {
+        {
             Basket basket = await UserBasket();
 
             BasketItem existingItem = await _basketItemReadRepository.GetSingleAsync(bi => bi.BasketId == basket.Id && bi.ProductId == request.ProductId);
@@ -109,6 +116,6 @@ namespace ECommerceAPI.Persistence.Services
                 _basketItemWriteRepository.Remove(existingItem);
                 await _basketItemWriteRepository.SaveAsync();
             }
-        }   
+        }
     }
 }

@@ -77,7 +77,7 @@ namespace ECommerceAPI.Persistence.Services
             await _orderWriteRepository.SaveAsync();
         }
 
-        public async Task<List<Order>> GetUserOrdersAsync()
+        public async Task<List<ListOrder>> GetUserOrdersAsync()
         {
             var username = _httpContextAccessor?.HttpContext?.User?.Identity?.Name;
             if (string.IsNullOrEmpty(username))
@@ -87,21 +87,43 @@ namespace ECommerceAPI.Persistence.Services
             if (user == null)
                 throw new Exception("User not found.");
 
-            return await _orderReadRepository.Table
+            var order = await _orderReadRepository.Table
                 .Where(o => o.UserId == user.Id)
                 .Include(o => o.OrderItems)
                 .ThenInclude(oi => oi.Product)
                 .ToListAsync();
+
+            return order.Select(o => new ListOrder()
+            {
+                Id = o.Id,
+                OrderNumber = o.OrderNumber,
+                Address = o.Address,
+                Status = o.Status,
+                TotalPrice = o.TotalPrice,
+                UserId = o.UserId,
+                OrderItems = o.OrderItems
+            }).ToList();
         }
 
-        public async Task<List<Order>> GetAllOrdersAsync()
+        public async Task<List<ListOrder>> GetAllOrdersAsync()
         {
-            return await _orderReadRepository.Table
+            var orders = await _orderReadRepository.Table
                 .Include(o => o.User)
                 .Include(o => o.OrderItems)
                 .ThenInclude(oi => oi.Product)
                 .OrderByDescending(o => o.CreatedAt)
                 .ToListAsync();
+
+            return orders.Select(o => new ListOrder()
+            {
+                Id = o.Id,
+                OrderNumber = o.OrderNumber,
+                Address = o.Address,
+                Status = o.Status,
+                TotalPrice = o.TotalPrice,
+                UserId = o.UserId,
+                OrderItems = o.OrderItems
+            }).ToList();
         }
 
         public async Task<bool> UpdateOrderStatusAsync(UpdateOrderStatusRequest request)

@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Application.Features.Commands.User.RefreshToken
 {
-    public class RefreshTokenHandler : IRequestHandler<RefreshTokenRequest, RefreshTokenResponse>
+    public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommandRequest, RefreshTokenCommandResponse>
     {
         private readonly IAuthService _authService;
 
-        public RefreshTokenHandler(IAuthService authService)
+        public RefreshTokenCommandHandler(IAuthService authService)
         {
             _authService = authService;
         }
 
-        public async Task<RefreshTokenResponse> Handle(RefreshTokenRequest request, CancellationToken cancellationToken)
+        public async Task<RefreshTokenCommandResponse> Handle(RefreshTokenCommandRequest request, CancellationToken cancellationToken)
         {
             Token token = await _authService.RefreshTokenLoginAsync(request.RefreshToken);
 

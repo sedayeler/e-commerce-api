@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Application.DTOs
 {
-    public class ListUser
+    public class ListRole
     {
         public string Id { get; set; }
-        public string FullName { get; set; }
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public bool TwoFactorEnabled { get; set; }
+        public string Name { get; set; }
     }
 }

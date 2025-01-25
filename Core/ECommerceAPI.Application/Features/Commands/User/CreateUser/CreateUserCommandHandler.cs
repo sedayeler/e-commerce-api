@@ -1,7 +1,6 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
 using ECommerceAPI.Application.DTOs;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
 
 namespace ECommerceAPI.Application.Features.Commands.User.CreateUser
 {
@@ -16,7 +15,7 @@ namespace ECommerceAPI.Application.Features.Commands.User.CreateUser
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            CreateUserResponse userResponse = await _userService.CreateUserAsync(new()
+            CreateUserResponse user = await _userService.CreateUserAsync(new()
             {
                 FullName = request.FullName,
                 Username = request.Username,
@@ -26,8 +25,8 @@ namespace ECommerceAPI.Application.Features.Commands.User.CreateUser
 
             return new()
             {
-                Succeeded = userResponse.Succeeded,
-                Message = userResponse.Message
+                Succeeded = user.Succeeded,
+                Message = user.Message
             };
         }
     }

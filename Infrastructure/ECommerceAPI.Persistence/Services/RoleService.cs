@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
+using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,14 +20,24 @@ namespace ECommerceAPI.Persistence.Services
             _roleManager = roleManager;
         }
 
-        public async Task<List<Role>> GetAllRolesAsync()
+        public async Task<List<ListRole>> GetAllRolesAsync()
         {
-            return await _roleManager.Roles.ToListAsync();
+            var roles = await _roleManager.Roles.ToListAsync();
+            return roles.Select(r => new ListRole()
+            {
+                Id = r.Id,
+                Name = r.Name
+            }).ToList();
         }
 
-        public async Task<Role> GetRoleByIdAsync(string id)
+        public async Task<ListRole> GetRoleByIdAsync(string id)
         {
-            return await _roleManager.FindByIdAsync(id);
+            var role = await _roleManager.FindByIdAsync(id);
+            return new()
+            {
+                Id = role.Id,
+                Name = role.Name
+            };
         }
 
         public async Task<bool> CreateRoleAsync(string name)

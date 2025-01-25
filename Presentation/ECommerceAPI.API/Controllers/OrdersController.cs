@@ -24,7 +24,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Reading, Definition = "Get user orders")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Reading, Definition = "Get User Orders")]
         public async Task<IActionResult> GetUserOrders([FromQuery] GetUserOrdersQueryRequest request)
         {
             List<GetUserOrdersQueryResponse> response = await _mediator.Send(request);
@@ -32,7 +32,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet("get-all")]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Reading, Definition = "Get all orders")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Reading, Definition = "Get All Orders")]
         public async Task<IActionResult> GetAllOrders([FromQuery] GetAllOrdersQueryRequest request)
         {
             List<GetAllOrdersQueryResponse> response = await _mediator.Send(request);
@@ -40,7 +40,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPost]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Writing, Definition = "Create order")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Writing, Definition = "Create Order")]
         public async Task<IActionResult> CreateOrder(CreateOrderCommandRequest request)
         {
             CreateOrderCommandResponse response = await _mediator.Send(request);
@@ -48,7 +48,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPut]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Updating, Definition = "Update order status")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.orders, ActionType = ActionType.Updating, Definition = "Update Order Status")]
         public async Task<IActionResult> UpdateOrderStatus(UpdateOrderStatusCommandRequest request)
         {
             UpdateOrderStatusCommandResponse response = await _mediator.Send(request);

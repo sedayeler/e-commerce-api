@@ -20,7 +20,7 @@ namespace ECommerceAPI.Application.Features.Queries.Order.GetUserOrders
 
         public async Task<List<GetUserOrdersQueryResponse>> Handle(GetUserOrdersQueryRequest request, CancellationToken cancellationToken)
         {
-            List<Domain.Entities.Order> orders = await _orderService.GetUserOrdersAsync();
+            List<ListOrder> orders = await _orderService.GetUserOrdersAsync();
 
             return orders.Select(order => new GetUserOrdersQueryResponse
             {

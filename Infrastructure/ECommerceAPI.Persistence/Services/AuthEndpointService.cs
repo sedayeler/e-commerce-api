@@ -19,10 +19,10 @@ namespace ECommerceAPI.Persistence.Services
         private readonly IMenuWriteRepository _menuWriteRepository;
         private readonly IEndpointReadRepository _endpointReadRepository;
         private readonly IEndpointWriteRepository _endpointWriteRepository;
-        private readonly IApplicationService _applicationService;
+        private readonly IAppService _applicationService;
         private readonly RoleManager<Role> _roleManager;
 
-        public AuthEndpointService(IMenuReadRepository menuReadRepository, IMenuWriteRepository menuWriteRepository, IEndpointReadRepository endpointReadRepository, IEndpointWriteRepository endpointWriteRepository, IApplicationService applicationService, RoleManager<Role> roleManager)
+        public AuthEndpointService(IMenuReadRepository menuReadRepository, IMenuWriteRepository menuWriteRepository, IEndpointReadRepository endpointReadRepository, IEndpointWriteRepository endpointWriteRepository, IAppService applicationService, RoleManager<Role> roleManager)
         {
             _menuReadRepository = menuReadRepository;
             _menuWriteRepository = menuWriteRepository;

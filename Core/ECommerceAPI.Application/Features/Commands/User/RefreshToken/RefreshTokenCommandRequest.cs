@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Application.Features.Commands.User.RefreshToken
 {
-    public class RefreshTokenRequest : IRequest<RefreshTokenResponse>
+    public class RefreshTokenCommandRequest : IRequest<RefreshTokenCommandResponse>
     {
         public string RefreshToken { get; set; }
     }

@@ -27,7 +27,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Reading, Definition = "Get all roles")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Reading, Definition = "Get All Roles")]
         public async Task<IActionResult> GetAllRoles([FromQuery] GetAllRolesQueryRequest request)
         {
             List<GetAllRolesQueryResponse> response = await _mediator.Send(request);
@@ -35,7 +35,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet("{Id}")]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Reading, Definition = "Get role by id")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Reading, Definition = "Get Role By Id")]
         public async Task<IActionResult> GetRoleById([FromRoute] GetRoleByIdQueryRequest request)
         {
             GetRoleByIdQueryResponse response = await _mediator.Send(request);
@@ -43,7 +43,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPost]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Writing, Definition = "Create role")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Writing, Definition = "Create Role")]
         public async Task<IActionResult> CreateRole(CreateRoleCommandRequest request)
         {
             CreateRoleCommandResponse response = await _mediator.Send(request);
@@ -51,7 +51,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPut]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Updating, Definition = "Update role")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Updating, Definition = "Update Role")]
         public async Task<IActionResult> UpdateRole(UpdateRoleCommandRequest request)
         {
             UpdateRoleCommandResponse response = await _mediator.Send(request);
@@ -59,7 +59,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpDelete]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Deleting, Definition = "Delete role")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.roles, ActionType = ActionType.Deleting, Definition = "Delete Role")]
         public async Task<IActionResult> DeleteRole(DeleteRoleCommandRequest request)
         {
             DeleteRoleCommandResponse response = await _mediator.Send(request);

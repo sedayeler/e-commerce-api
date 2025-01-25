@@ -10,15 +10,15 @@ namespace ECommerceAPI.API.Controllers
     [ApiController]
     public class ApplicationServicesController : ControllerBase
     {
-        private readonly IApplicationService _applicationService;
+        private readonly IAppService _applicationService;
 
-        public ApplicationServicesController(IApplicationService applicationService)
+        public ApplicationServicesController(IAppService applicationService)
         {
             _applicationService = applicationService;
         }
 
         [HttpGet]
-        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get authorize definition endpoints")]
+        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Authorize Definition Endpoints")]
         public IActionResult GetAuthorizeDefinitionEndpoints()
         {
             var datas = _applicationService.GetAuthorizeDefinitionEndpoints(typeof(Program));

@@ -39,7 +39,7 @@ namespace ECommerceAPI.API.Controllers
 
         [HttpPost]
         [Authorize(AuthenticationSchemes = "Admin")]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Writing, Definition = "Create product")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Writing, Definition = "Create Product")]
         public async Task<IActionResult> CreateProduct(CreateProductCommandRequest request)
         {
             CreateProductCommandResponse response = await _mediator.Send(request);
@@ -48,7 +48,7 @@ namespace ECommerceAPI.API.Controllers
 
         [HttpPut]
         [Authorize(AuthenticationSchemes = "Admin")]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Updating, Definition = "Update product")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Updating, Definition = "Update Product")]
         public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
         {
             UpdateProductCommandResponse response = await _mediator.Send(request);
@@ -57,7 +57,7 @@ namespace ECommerceAPI.API.Controllers
 
         [HttpDelete("{Id}")]
         [Authorize(AuthenticationSchemes = "Admin")]
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Deleting, Definition = "Delete product")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.products, ActionType = ActionType.Deleting, Definition = "Delete Product")]
         public async Task<IActionResult> DeleteProduct([FromRoute] DeleteProductCommandRequest request)
         {
             DeleteProductCommandResponse response = await _mediator.Send(request);
