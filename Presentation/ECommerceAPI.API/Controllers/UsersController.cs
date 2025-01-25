@@ -1,7 +1,14 @@
-﻿using ECommerceAPI.Application.Features.Commands.User.CreateUser;
+﻿using ECommerceAPI.Application.Consts;
+using ECommerceAPI.Application.CustomAttributes;
+using ECommerceAPI.Application.Features.Commands.User.AssignRoleToUser;
+using ECommerceAPI.Application.Features.Commands.User.CreateUser;
 using ECommerceAPI.Application.Features.Commands.User.LoginUser;
 using ECommerceAPI.Application.Features.Commands.User.RefreshToken;
+using ECommerceAPI.Application.Features.Queries.User.GetAllUsers;
+using ECommerceAPI.Application.Features.Queries.User.GetRolesToUser;
+using ECommerceAPI.Domain.Enums;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceAPI.API.Controllers
@@ -15,6 +22,15 @@ namespace ECommerceAPI.API.Controllers
         public UsersController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.users, ActionType = ActionType.Reading, Definition = "Get All Users")]
+        public async Task<IActionResult> GetAllUsers([FromQuery] GetAllUsersQueryRequest request)
+        {
+            GetAllUsersQueryResponse response = await _mediator.Send(request);
+            return Ok(response);
         }
 
         [HttpPost("register")]
@@ -35,6 +51,24 @@ namespace ECommerceAPI.API.Controllers
         public async Task<IActionResult> RefreshTokenLoginUser([FromForm] RefreshTokenRequest request)
         {
             RefreshTokenResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+        [HttpPost("assign-role-to-user")]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.users, ActionType = ActionType.Writing, Definition = "Assign Role To User")]
+        public async Task<IActionResult> AssignRoleToUser(AssignRoleToUserCommandRequest request)
+        {
+            AssignRoleToUserCommandResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+        [HttpGet("get-roles-to-user")]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.users, ActionType = ActionType.Reading, Definition = "Get Roles To User")]
+        public async Task<IActionResult> GetRolesToUser(GetRolesToUserQueryRequest request)
+        {
+            GetRolesToUserQueryResponse response = await _mediator.Send(request);
             return Ok(response);
         }
     }
