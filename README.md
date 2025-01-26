@@ -10,7 +10,7 @@ This project is an e-commerce system developed using ASP.NET Core Web API. It al
 - **Fluent Validation** for data validation.
 - **JWT Token Authentication & Authorization** for secure access control.
 - **SignalR** for real-time notifications.
-- **MailService** using Gmail SMTP for email notifications.
+- MailService using **Gmail SMTP** for email notifications.
 - **Serilog** for logging and monitoring.
 - **Global Exception Handler** for centralized error handling.
 
