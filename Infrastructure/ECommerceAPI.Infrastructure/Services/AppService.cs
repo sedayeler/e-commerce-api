@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Infrastructure.Services
 {
-    public class ApplicationService : IAppService
+    public class AppService : IAppService
     {
         public List<Menu> GetAuthorizeDefinitionEndpoints(Type type)
         {

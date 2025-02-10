@@ -22,10 +22,10 @@ namespace ECommerceAPI.Application.Features.Queries.Role.GetAllRoles
         {
             List<ListRole> roles = await _roleService.GetAllRolesAsync();
 
-            return roles.Select(role => new GetAllRolesQueryResponse
+            return roles.Select(r => new GetAllRolesQueryResponse()
             {
-                Id = role.Id,
-                Name = role.Name
+                Id = r.Id,
+                Name = r.Name
             }).ToList();
         }
     }

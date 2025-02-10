@@ -16,7 +16,7 @@ namespace ECommerceAPI.Application.Features.Queries.Product.GetAllProducts
         {
             var products = _productReadRepository.GetAll(false).ToList();
 
-            return products.Select(p => new GetAllProductsQueryResponse
+            return products.Select(p => new GetAllProductsQueryResponse()
             {
                 Id = p.Id,
                 Name = p.Name,

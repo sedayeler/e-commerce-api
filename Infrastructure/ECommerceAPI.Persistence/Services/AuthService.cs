@@ -2,14 +2,8 @@
 using ECommerceAPI.Application.Abstractions.Services;
 using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities.Identity;
-using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECommerceAPI.Persistence.Services
 {

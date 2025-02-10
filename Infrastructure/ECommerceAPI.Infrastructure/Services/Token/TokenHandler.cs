@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions;
+using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Domain.Entities.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -11,7 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerceAPI.Infrastructure.Services.Token
+namespace ECommerceAPI.Infrastructure.Services
 {
     public class TokenHandler : ITokenHandler
     {
@@ -22,9 +23,9 @@ namespace ECommerceAPI.Infrastructure.Services.Token
             _configuration = configuration;
         }
 
-        public Application.DTOs.Token CreateAccessToken(int minute, User user)
+        public Token CreateAccessToken(int minute, User user)
         {
-            Application.DTOs.Token token = new();
+            Token token = new();
 
             SymmetricSecurityKey securityKey = new(Encoding.UTF8.GetBytes(_configuration["Token:SecurityKey"]));
             SigningCredentials signingCredentials = new(securityKey, SecurityAlgorithms.HmacSha256);

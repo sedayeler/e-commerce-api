@@ -5,11 +5,6 @@ using ECommerceAPI.Domain.Entities;
 using ECommerceAPI.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECommerceAPI.Persistence.Services
 {
@@ -61,7 +56,6 @@ namespace ECommerceAPI.Persistence.Services
                 foreach (var error in result.Errors)
                     userResponse.Message = $"{error.Code} - {error.Description}";
             }
-
             return userResponse;
         }
 

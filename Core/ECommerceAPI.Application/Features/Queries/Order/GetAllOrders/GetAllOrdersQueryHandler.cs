@@ -22,7 +22,7 @@ namespace ECommerceAPI.Application.Features.Queries.Order.GetAllOrders
         {
             List<ListOrder> orders = await _orderService.GetAllOrdersAsync();
 
-            return orders.Select(o => new GetAllOrdersQueryResponse
+            return orders.Select(o => new GetAllOrdersQueryResponse()
             {
                 Id = o.Id,
                 OrderNumber = o.OrderNumber,

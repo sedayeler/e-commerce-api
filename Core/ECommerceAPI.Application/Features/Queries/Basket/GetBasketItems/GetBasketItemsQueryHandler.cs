@@ -1,5 +1,4 @@
 ﻿using ECommerceAPI.Application.Abstractions.Services;
-using ECommerceAPI.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;

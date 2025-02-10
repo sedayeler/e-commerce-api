@@ -31,9 +31,9 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetByIdProduct([FromRoute] GetByIdQueryRequest request)
+        public async Task<IActionResult> GetByIdProduct([FromRoute] GetProductByIdQueryRequest request)
         {
-            GetByIdQueryResponse response = await _mediator.Send(request);
+            GetProductByIdQueryResponse response = await _mediator.Send(request);
             return Ok(response);
         }
 

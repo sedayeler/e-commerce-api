@@ -22,18 +22,18 @@ namespace ECommerceAPI.Application.Features.Queries.Order.GetUserOrders
         {
             List<ListOrder> orders = await _orderService.GetUserOrdersAsync();
 
-            return orders.Select(order => new GetUserOrdersQueryResponse
+            return orders.Select(o => new GetUserOrdersQueryResponse()
             {
-                Id = order.Id,
-                OrderNumber = order.OrderNumber,
-                Address = order.Address,
-                Status = order.Status.ToString(),
-                TotalPrice = order.TotalPrice,
-                UserId = order.UserId,
-                OrderItems = order.OrderItems.Select(oi => new ListOrderItem
+                Id = o.Id,
+                OrderNumber = o.OrderNumber,
+                Address = o.Address,
+                Status = o.Status.ToString(),
+                TotalPrice = o.TotalPrice,
+                UserId = o.UserId,
+                OrderItems = o.OrderItems.Select(oi => new ListOrderItem()
                 {
-                    ProductName = oi.Product.Name,
                     ProductId = oi.Product.Id,
+                    ProductName = oi.Product.Name,
                     Price = oi.Price,
                     Quantity = oi.Quantity,
                     OrderId = oi.OrderId

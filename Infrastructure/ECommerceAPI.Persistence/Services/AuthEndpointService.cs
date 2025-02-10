@@ -2,14 +2,8 @@
 using ECommerceAPI.Application.Repositories;
 using ECommerceAPI.Domain.Entities;
 using ECommerceAPI.Domain.Entities.Identity;
-using ECommerceAPI.Persistence.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECommerceAPI.Persistence.Services
 {
@@ -19,16 +13,16 @@ namespace ECommerceAPI.Persistence.Services
         private readonly IMenuWriteRepository _menuWriteRepository;
         private readonly IEndpointReadRepository _endpointReadRepository;
         private readonly IEndpointWriteRepository _endpointWriteRepository;
-        private readonly IAppService _applicationService;
+        private readonly IAppService _appService;
         private readonly RoleManager<Role> _roleManager;
 
-        public AuthEndpointService(IMenuReadRepository menuReadRepository, IMenuWriteRepository menuWriteRepository, IEndpointReadRepository endpointReadRepository, IEndpointWriteRepository endpointWriteRepository, IAppService applicationService, RoleManager<Role> roleManager)
+        public AuthEndpointService(IMenuReadRepository menuReadRepository, IMenuWriteRepository menuWriteRepository, IEndpointReadRepository endpointReadRepository, IEndpointWriteRepository endpointWriteRepository, IAppService appService, RoleManager<Role> roleManager)
         {
             _menuReadRepository = menuReadRepository;
             _menuWriteRepository = menuWriteRepository;
             _endpointReadRepository = endpointReadRepository;
             _endpointWriteRepository = endpointWriteRepository;
-            _applicationService = applicationService;
+            _appService = appService;
             _roleManager = roleManager;
         }
 
@@ -41,6 +35,7 @@ namespace ECommerceAPI.Persistence.Services
                 {
                     Name = menu
                 };
+
                 await _menuWriteRepository.AddAsync(_menu);
                 await _menuWriteRepository.SaveAsync();
             }
@@ -53,7 +48,7 @@ namespace ECommerceAPI.Persistence.Services
 
             if (endpoint == null)
             {
-                var action = _applicationService.GetAuthorizeDefinitionEndpoints(type)
+                var action = _appService.GetAuthorizeDefinitionEndpoints(type)
                     .FirstOrDefault(m => m.Name == menu)?
                     .Actions.FirstOrDefault(a => a.Code == code);
 

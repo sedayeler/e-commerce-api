@@ -6,11 +6,6 @@ using ECommerceAPI.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECommerceAPI.Persistence.Services
 {
@@ -69,7 +64,7 @@ namespace ECommerceAPI.Persistence.Services
             {
                 Id = bi.Id,
                 Quantity = bi.Quantity,
-                BasketId = bi.BasketId, 
+                BasketId = bi.BasketId,
                 ProductId = bi.ProductId,
                 Product = bi.Product
             }).ToList();

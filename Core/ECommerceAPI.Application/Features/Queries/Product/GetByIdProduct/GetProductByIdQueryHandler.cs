@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Application.Features.Queries.Product.GetByIdProduct
 {
-    public class GetByIdQueryHandler : IRequestHandler<GetByIdQueryRequest, GetByIdQueryResponse>
+    public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQueryRequest, GetProductByIdQueryResponse>
     {
         private readonly IProductReadRepository _productReadRepository;
 
-        public GetByIdQueryHandler(IProductReadRepository productReadRepository)
+        public GetProductByIdQueryHandler(IProductReadRepository productReadRepository)
         {
             _productReadRepository = productReadRepository;
         }
 
-        public async Task<GetByIdQueryResponse> Handle(GetByIdQueryRequest request, CancellationToken cancellationToken)
+        public async Task<GetProductByIdQueryResponse> Handle(GetProductByIdQueryRequest request, CancellationToken cancellationToken)
         {
             var product = await _productReadRepository.GetByIdAsync(request.Id, false);
 
