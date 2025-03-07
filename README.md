@@ -17,6 +17,10 @@ This project is an e-commerce website developed with ASP.NET Core Web API (.NET 
 - **Email Service:** Integrated with **SMTP** for email service functionality.
 - **Version Control:** Code is managed using **Git & GitHub**.
 
+![Image](https://github.com/user-attachments/assets/44708f96-5303-4ee8-bc52-05a479de7b63)
+![Image](https://github.com/user-attachments/assets/06940c00-37e5-4058-9641-175a7eb2b0bd)
+![Image](https://github.com/user-attachments/assets/0dbcf63b-9548-4381-a858-b3f56266345a)
+
 ## Installation
 Follow these steps to run the project:
 
